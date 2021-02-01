@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>openrgb: class Device</title>
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="MobileOptimized" content="20" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+	<link rel="stylesheet" href="../../main.css">
+	<link rel="stylesheet" href="../../lightmode.css">
+
+	<script src="../../load.js"></script>
+	<script src="../../main.js"></script>
+</head>
+<body>
+	
+	<div id="extend-navigator"><div></div><div></div></div>
+	<div id="navigator">
+		<a href="/openrgb/" id="navigator-heading">Navigation</a>
+		<div id="navigator-list">
+			<a href="/openrgb/client/" class="navigator-top">Client</a>
+			<a href="/openrgb/device/" class="navigator-top">Device</a>
+			<a href="/openrgb/utils/" class="navigator-top">utils</a>
+			<div class="navigator-divider"></div>
+			<a href="/openrgb/objects/" class="navigator-top navigator-extra">objects</a>
+		</div>
+		<div id="navigator-border"></div>
+	</div>
+	<div id="navigator-overlay"></div>
+
+	<div id="doc">
+		<div id="doc-heading">class Device</div>
+
+		<div id="content">
+			<div id="toc">
+				<div class="toc-item">
+					<div class="toc-heading">properties</div>
+					<div class="toc-content">
+						<a href="#activeMode">activeMode</a>
+						<a href="#colors">colors</a>
+						<a href="#description">description</a>
+						<a href="#leds">leds</a>
+						<a href="#location">location</a>
+						<a href="#modes">modes</a>
+						<a href="#name">name</a>
+						<a href="#serial">serial</a>
+						<a href="#type">type</a>
+						<a href="#version">version</a>
+						<a href="#zones">zones</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="sub-content">
+				<div id="activeMode" class="sub-content-header">.activeMode</div>
+				<div class="sub-content-content">
+					<div>zero indexed integer of the index of the currently active <a href="/openrgb/objects/#mode">mode</a></div>
+					<div class="property-type">type: <div class="property-value">int</div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+let mode = device.activeMode
+				</code></pre>
+			</div>
+
+			<div class="sub-content">
+				<div id="colors" class="sub-content-header">.colors</div>
+				<div class="sub-content-content">
+					<div>collection of the <a href="/openrgb/objects/#color">rgb</a> colors the device leds are set to (one per led)</div>
+					<div class="property-type">type: <div class="property-highlight">array&lt;<div class="property-value">color</div>&gt;</div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+let colors = device.colors
+				</code></pre>
+			</div>
+
+			<div class="sub-content">
+				<div id="description" class="sub-content-header">.description</div>
+				<div class="sub-content-content">
+					<div>description of the product</div>
+					<div class="property-type">type: <div class="property-value">string</div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+let desctiption = device.desctiption
+				</code></pre>
+			</div>
+
+			<div class="sub-content">
+				<div id="leds" class="sub-content-header">.leds</div>
+				<div class="sub-content-content">
+					<div>collection of the device's leds</div>
+					<div class="property-type">type: <div class="property-highlight">array&lt;<div class="property-value">led</div>&gt;</div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+let leds = device.leds
+				</code></pre>
+			</div>
+
+			<div class="sub-content">
+				<div id="modes" class="sub-content-header">.modes</div>
+				<div class="sub-content-content">
+					<div>collection of the device's <a href="/openrgb/objects/#mode">modes</a></a></div>
+					<div class="property-type">type: <div class="property-highlight">array&lt;<div class="property-value">mode</div>&gt;</div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+let modes = device.modes
+				</code></pre>
+			</div>
+
+			<div class="sub-content">
+				<div id="name" class="sub-content-header">.name</div>
+				<div class="sub-content-content">
+					<div>name of the product</div>
+					<div class="property-type">type: <div class="property-value">string</div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+let name = device.name
+				</code></pre>
+			</div>
+
+			<div class="sub-content">
+				<div id="serial" class="sub-content-header">.serial</div>
+				<div class="sub-content-content">
+					<div>???</a></div>
+					<div class="property-type">type: <div class="property-value">string</div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+let serial = device.serial
+				</code></pre>
+			</div>
+
+			<div class="sub-content">
+				<div id="type" class="sub-content-header">.type</div>
+				<div class="sub-content-content">
+					<div>zero indexed integer showing the device's type, corresponding to the integers of the <a href="#">type list</a></div>
+					<div class="property-type">type: <div class="property-value">int</div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+let type = device.type
+				</code></pre>
+			</div>
+
+			<div class="sub-content">
+				<div id="version" class="sub-content-header">.version</div>
+				<div class="sub-content-content">
+					<div>version of the product</div>
+					<div class="property-type">type: <div class="property-value">string</div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+let version = device.version
+				</code></pre>
+			</div>
+
+			<div class="sub-content">
+				<div id="zones" class="sub-content-header">.zones</div>
+				<div class="sub-content-content">
+					<div>collection of the device's <a href="/openrgb/objects/#zone">zones</a></a></div>
+					<div class="property-type">type: <div class="property-highlight">array&lt;<div class="property-value">zone</div>&gt;</div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+let zones = device.zones
+				</code></pre>
+			</div>
+		</div>
+	</div>
+
+	<div id="action-bar">
+		<div class="action-content"></div>
+		<div class="close" id="action-bar-close"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/atom-one-dark.min.css");
+
+:root {
+	/* - COLOR - */
+	/* general */
+	--background: #21252b;
+
+	--text-color: #ffffff;
+
+	/* heading */
+	--heading-border: #000000;
+	--content-divider: #000000;
+
+	/* navigator */
+	--navigator-heading-focus: #992c34;
+
+	--navigator-extend-border: #b03634;
+	--navigator-extend-background: #00000f; /*Todo*/
+	--navigator-extend-lines: #b03634;
+
+	--navigator-item: #282c34;
+	--navigator-item-hover: #181a1f;
+
+	--navigator-extra-text: #ff4500;
+	
+	--navigator-divider: #999999;
+
+	/* table of content */
+	--toc-heading-border: #ff6b46; /*Todo*/
+	--toc-background-focus: #ff6b4666; /*Todo*/
+
+	/* CONTENT */
+	/* content */
+	--content-border-left: #ff450033; /*Todo*/
+	--content-border-left-focus: #ff4500ba; /*Todo*/
+	--content-link: #008080e6; /*Todo*/
+	--content-link-focus: #005050; /*Todo*/
+
+	/* table */
+	--table-heading-background: #b03434;
+	--table-heading-text: #181a1f;
+	--table-cell-background: #282c34;
+
+	/* type / return */
+	--property-background: #182127;
+	--property-text: #dddddd;
+	--property-highlight: #00808099;
+	--property-highlight-value:#ff4500d0;
+	--property-link: #bb2000;
+
+	/* code */
+	--code-extend: #9c291233;
+	--code-extend-focus: #9c2912bb;
+	--code-extend-line: #ffffff;
+
+	/* action bar */
+	--actionbar-background: red;
+	--actionbar-cross: #333;
+
+	/* index */
+	--index-project-background: #282c34;
+	--index-project-background-focus: #992c3466;
+
+	/* - FONT - */
+	--font: monospace;
+}

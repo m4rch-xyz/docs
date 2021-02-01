@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>openrgb: objects</title>
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="MobileOptimized" content="20" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+	<link rel="stylesheet" href="../../main.css">
+	<link rel="stylesheet" href="../../lightmode.css">
+
+	<script src="../../load.js"></script>
+	<script src="../../main.js"></script>
+</head>
+<body>
+	
+	<div id="extend-navigator"><div></div><div></div></div>
+	<div id="navigator">
+		<a href="/openrgb/" id="navigator-heading">Navigation</a>
+		<div id="navigator-list">
+			<a href="/openrgb/client/" class="navigator-top">Client</a>
+			<a href="/openrgb/device/" class="navigator-top">Device</a>
+			<a href="/openrgb/utils/" class="navigator-top">utils</a>
+			<div class="navigator-divider"></div>
+			<a href="/openrgb/objects/" class="navigator-top navigator-extra">objects</a>
+		</div>
+		<div id="navigator-border"></div>
+	</div>
+	<div id="navigator-overlay"></div>
+
+	<div id="doc">
+		<div id="doc-heading">objects</div>
+
+		<div id="content">
+
+			<div id="toc">
+				<div class="toc-item">
+					<div class="toc-heading">objects</div>
+					<div class="toc-content">
+						<a href="#color">color</a>
+						<a href="#led">led</a>
+						<a href="#mode">mode</a>
+						<a href="#zone">zone</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="sub-content">
+				<div id="color" class="sub-content-header">color</div>
+				<div class="sub-content-content">
+					<div>an object containing the 3 rgb values</div>
+					<table class="object-table table">
+						<tr>
+							<th>parameter</th>
+							<th>type</th>
+							<th>description</th>
+						</tr>
+						<tr>
+							<td>red</td>
+							<td>integer</td>
+							<td>the value for red in the additive rgb-model</td>
+						</tr>
+						<tr>
+							<td>green</td>
+							<td>integer</td>
+							<td>the value for green in the additive rgb-model</td>
+						</tr>
+						<tr>
+							<td>blue</td>
+							<td>integer</td>
+							<td>the value for blue in the additive rgb-model</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<div class="sub-content">
+				<div id="led" class="sub-content-header">led</div>
+				<div class="sub-content-content">
+					<div>an object containing all the values for an led</div>
+					<table class="object-table table">
+						<tr>
+							<th>parameter</th>
+							<th>type</th>
+							<th>description</th>
+						</tr>
+						<tr>
+							<td>name</td>
+							<td>string</td>
+							<td>the name of the led</td>
+						</tr>
+						<tr>
+							<td>value</td>
+							<td>object&lt;<a href="#color">color</a>&gt;</td>
+							<td>an object of the currently set rgb-values</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<div class="sub-content">
+				<div id="mode" class="sub-content-header">mode</div>
+				<div class="sub-content-content">
+					<div>an object containing all the values for a native mode of the device</div>
+					<table class="object-table table">
+						<tr>
+							<th>parameter</th>
+							<th>type</th>
+							<th>description</th>
+						</tr>
+						<tr>
+							<td>id</td>
+							<td>integer</td>
+							<td>mode index</td>
+						</tr>
+						<tr>
+							<td>name</td>
+							<td>string</td>
+							<td>mode name</td>
+						</tr>
+						<tr>
+							<td>value</td>
+							<td>integer</td>
+							<td>mode identifier</td>
+						</tr>
+						<tr>
+							<td>flags</td>
+							<td>integer</td>
+							<td>????</td>
+						</tr>
+						<tr>
+							<td>speedMin</td>
+							<td>integer</td>
+							<td>minimum speed the mode can be set to</td>
+						</tr>
+						<tr>
+							<td>speedMax</td>
+							<td>integer</td>
+							<td>maximum speed the mode can be set to</td>
+						</tr>
+						<tr>
+							<td>colorMin</td>
+							<td>integer</td>
+							<td>minimum colors for this mode, if fewer rest defaults to black</td>
+						</tr>
+						<tr>
+							<td>colorMax</td>
+							<td>integer</td>
+							<td>maximum colors for this mode</td>
+						</tr>
+						<tr>
+							<td>speed</td>
+							<td>integer</td>
+							<td>speed the mode is currently set to</td>
+						</tr>
+						<tr>
+							<td>direction</td>
+							<td>integer</td>
+							<td>direction the mode is currently set to ????</td>
+						</tr>
+						<tr>
+							<td>colorMode</td>
+							<td>integer</td>
+							<td>????</td>
+						</tr>
+						<tr>
+							<td>colorLength</td>
+							<td>integer</td>
+							<td>????</td>
+						</tr>
+						<tr>
+							<td>colors</td>
+							<td>array</td>
+							<td>the colors the mode is currently set to</td>
+						</tr>
+						<tr>
+							<td>flagList</td>
+							<td>array</td>
+							<td>list of flags from flags attribute</td>
+						</tr>
+
+					</table>
+				</div>
+			</div>
+
+			<div class="sub-content">
+				<div id="zone" class="sub-content-header">zone</div>
+				<div class="sub-content-content">
+					<div>an object containing every values a zone can have</div>
+					<table class="object-table table">
+						<tr>
+							<th>parameter</th>
+							<th>type</th>
+							<th>description</th>
+						</tr>
+						<tr>
+							<td>name</td>
+							<td>string</td>
+							<td>zone name</td>
+						</tr>
+						<tr>
+							<td>id</td>
+							<td>integer</td>
+							<td>zone index</td>
+						</tr>
+						<tr>
+							<td>type</td>
+							<td>integer</td>
+							<td>????</td>
+						</tr>
+						<tr>
+							<td>ledsMin</td>
+							<td>integer</td>
+							<td>the minimum amount of leds this zone has to be assigned</td>
+						</tr>
+						<tr>
+							<td>ledsMax</td>
+							<td>integer</td>
+							<td>the amount of leds this zone can maximally be assigned</td>
+						</tr>
+						<tr>
+							<td>ledsCount</td>
+							<td>integer</td>
+							<td>the amount of leds currently distributed to this zone</td>
+						</tr>
+						<tr>
+							<td>resizable</td>
+							<td>boolean</td>
+							<td>if the zone is resizable</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>openrgb: class Client</title>
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="MobileOptimized" content="20" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad()</script>
+
+	<link rel="stylesheet" href="../../main.css">
+	<link rel="stylesheet" href="../../lightmode.css">
+
+	<script src="../../load.js"></script>
+	<script src="../../main.js"></script>
+</head>
+<body>
+	
+	<div id="extend-navigator"><div></div><div></div></div>
+	<div id="navigator">
+		<a href="/openrgb/" id="navigator-heading">Navigation</a>
+		<div id="navigator-list">
+			<a href="/openrgb/client/" class="navigator-top">Client</a>
+			<a href="/openrgb/device/" class="navigator-top">Device</a>
+			<a href="/openrgb/utils/" class="navigator-top">utils</a>
+			<div class="navigator-divider"></div>
+			<a href="/openrgb/objects/" class="navigator-top navigator-extra">objects</a>
+		</div>
+		<div id="navigator-border"></div>
+	</div>
+	<div id="navigator-overlay"></div>
+
+	<div id="doc">
+		<div id="doc-heading">class Client</div>
+
+		<div id="content">
+			<div id="toc">
+				<div class="toc-item">
+					<div class="toc-heading">methods</div>
+					<div class="toc-content">
+						<a class="constructor" href="#constructor">constructor</a>
+						<a href="#connect">connect</a>
+						<a href="#disconnect">disconnect</a>
+						<a href="#getControllerCount">getControllerCount</a>
+						<a href="#getControllerData">getControllerData</a>
+						<a href="#getProtocolVersion">getProtocolVersion</a>
+						<a href="#updateLeds">updateLeds</a>
+						<a href="#updateZoneLeds">updateZoneLeds</a>
+						<a href="#setCustomMode">setCustomMode</a>
+						<a href="#resizeZone">resizeZone</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="sub-content">
+				<div id="constructor" class="constructor sub-content-header">constructor(host, port, name)</div>
+				<div class="sub-content-content">
+					<div>constructs a new openrgb Client</div>
+					<table class="function-table table">
+						<tr>
+							<th>parameter</th>
+							<th>type</th>
+							<th>optional</th>
+							<th>default</th>
+							<th>description</th>
+						</tr>
+						<tr>
+							<td>name</td>
+							<td>string</td>
+							<td>y</td>
+							<td>nodejs</td>
+							<td>name for openrgb</td>
+						</tr>
+						<tr>
+							<td>port</td>
+							<td>integer</td>
+							<td>y</td>
+							<td>6742</td>
+							<td>port of sdk server</td>
+						</tr>
+						<tr>
+							<td>host</td>
+							<td>string</td>
+							<td>y</td>
+							<td>localhost</td>
+							<td>device of sdk server</td>
+						</tr>
+					</table>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+let client = new Client()
+				</code></pre>
+			</div>
+
+			<div class="sub-content">
+				<div id="connect" class="sub-content-header">.connect()</div>
+				<div class="sub-content-content">
+					<div>connects the openrgb Client</div>
+					<div class="property-type">returns: <div class="property-highlight">Promise&lt;&gt;</div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+await client.connect()
+				</code></pre>
+			</div>
+
+			<div class="sub-content">
+				<div id="disconnect" class="sub-content-header">.disconnect()</div>
+				<div class="sub-content-content">
+					<div>disconnects the openrgb Client</div>
+					<div class="property-type">returns: <div class="property-highlight">Promise&lt;&gt;</div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+await client.disconnect()
+				</code></pre>
+			</div>
+
+			<div class="sub-content">
+				<div id="getControllerCount" class="sub-content-header">.getControllerCount()</div>
+				<div class="sub-content-content">
+					<div>returns the amount of devices connected to OpenRGB</div>
+					<div class="property-type">returns: <div class="property-highlight">Promise&lt;<div class="property-value">integer</div>&gt;</div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+let amount = await client.getControllerCount()
+				</code></pre>
+			</div>
+
+			<div class="sub-content">
+				<div id="getControllerData" class="sub-content-header">.getControllerData(deviceId)</div>
+				<div class="sub-content-content">
+					<div>returns device data of specified device</div>
+					<table class="function-table table">
+						<tr>
+							<th>parameter</th>
+							<th>type</th>
+							<th>optional</th>
+							<th>description</th>
+						</tr>
+						<tr>
+							<td>deviceId</td>
+							<td>integer</td>
+							<td>n</td>
+							<td>device index</td>
+						</tr>
+					</table>
+					<div class="property-type">returns: <div class="property-highlight">Promise&lt;<a class="property-link" href="/openrgb/device/">Device</a>&gt;</div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+let device1 = await client.getControllerData(1)
+				</code></pre>
+			</div>
+
+			<div class="sub-content">
+				<div id="getProtocolVersion" class="sub-content-header">.getProtocolVersion()</div>
+				<div class="sub-content-content">
+					<div>returns the version of the protocol</div>
+					<div class="property-type">returns: <div class="property-highlight">Promise&lt;<div class="property-value">integer</div>&gt;</div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+let protocol = await client.getProtocolVersion()
+				</code></pre>
+			</div>
+
+			<div class="sub-content">
+				<div id="updateLeds" class="sub-content-header">.updateLeds(deviceId, colors)</div>
+				<div class="sub-content-content">
+					<div>updates leds with the given colors</div>
+					<table class="function-table table">
+						<tr>
+							<th>parameter</th>
+							<th>type</th>
+							<th>optional</th>
+							<th>description</th>
+						</tr>
+						<tr>
+							<td>deviceId</td>
+							<td>integer</td>
+							<td>n</td>
+							<td>device index</td>
+						</tr>
+						<tr>
+							<td>colors</td>
+							<td>array&lt;<a href="/openrgb/objects/#color">color</a>&gt;</td>
+							<td>n</td>
+							<td>array of rgb color objects</td>
+						</tr>
+					</table>
+					<div class="property-type">returns: <div class="property-highlight">Promise&lt;&gt;</div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+await client.updateLeds(1, Array(device.colors.count).fill({red: 0, green: 128, blue: 128}))
+				</code></pre>
+			</div>
+
+			<div class="sub-content">
+				<div id="updateZoneLeds" class="sub-content-header">.updateZoneLeds(deviceId, zoneId, colors)</div>
+				<div class="sub-content-content">
+					<div>updates leds of specific zone with the given colors</div>
+					<table class="function-table table">
+						<tr>
+							<th>parameter</th>
+							<th>type</th>
+							<th>optional</th>
+							<th>description</th>
+						</tr>
+						<tr>
+							<td>deviceId</td>
+							<td>integer</td>
+							<td>n</td>
+							<td>device index</td>
+						</tr>
+						<tr>
+							<td>zoneId</td>
+							<td>integer</td>
+							<td>n</td>
+							<td>zone index for device</td>
+						</tr>
+						<tr>
+							<td>colors</td>
+							<td>array&lt;<a href="/openrgb/objects/#color">color</a>&gt;</td>
+							<td>n</td>
+							<td>array of rgb color objects</td>
+						</tr>
+					</table>
+					<div class="property-type">returns: <div class="property-highlight">Promise&lt;&gt;</div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+await client.updateZoneLeds(1, 2, Array(device.zones[2].ledsCount).fill({red: 0, green: 128, blue: 128}))
+				</code></pre>
+			</div>
+			<div class="sub-content">
+				<div id="setCustomMode" class="sub-content-header">.updateMode(deviceId)</div>
+				<div class="sub-content-content">
+					<div>changes the mode of the device to a specific mode</div>
+					<table class="function-table table">
+						<tr>
+							<th>parameter</th>
+							<th>type</th>
+							<th>optional</th>
+							<th>description</th>
+						</tr>
+						<tr>
+							<td>deviceId</td>
+							<td>integer</td>
+							<td>n</td>
+							<td>device index</td>
+						</tr>
+						<tr>
+							<td>mode</td>
+							<td>integer|string</td>
+							<td>n</td>
+							<td>either name or id of a mode</td>
+						</tr>
+					</table>
+					<div class="property-type">returns: <div class="property-highlight">Promise&lt;&gt;</div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+await client.setCustomMode(1)
+				</code></pre>
+			</div>
+			<div class="sub-content">
+				<div id="setCustomMode" class="sub-content-header">.setCustomMode(deviceId)</div>
+				<div class="sub-content-content">
+					<div>Sets the device to its mode for individual led control (or an equivalent)</div>
+					<table class="function-table table">
+						<tr>
+							<th>parameter</th>
+							<th>type</th>
+							<th>optional</th>
+							<th>description</th>
+						</tr>
+						<tr>
+							<td>deviceId</td>
+							<td>integer</td>
+							<td>n</td>
+							<td>device index</td>
+						</tr>
+					</table>
+					<div class="property-type">returns: <div class="property-highlight">Promise&lt;&gt;</div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+await client.setCustomMode(1)
+				</code></pre>
+			</div>
+
+			<div class="sub-content">
+				<div id="resizeZone" class="sub-content-header">.resizeZone(deviceId, zoneId, zoneLength)</div>
+				<div class="sub-content-content">
+					<div>changes the amount of leds of a zone</div>
+					<table class="function-table table">
+						<tr>
+							<th>parameter</th>
+							<th>type</th>
+							<th>optional</th>
+							<th>description</th>
+						</tr>
+						<tr>
+							<td>deviceId</td>
+							<td>integer</td>
+							<td>n</td>
+							<td>device index</td>
+						</tr>
+						<tr>
+							<td>zoneId</td>
+							<td>integer</td>
+							<td>n</td>
+							<td>zone index for device</td>
+						</tr>
+						<tr>
+							<td>zoneLength</td>
+							<td>integer</td>
+							<td>n</td>
+							<td>new amount of leds</td>
+						</tr>
+					</table>
+				<div class="property-type">returns: <div class="property-highlight">Promise&lt;&gt;</div></div>
+			</div>
+			<div class="extend-code"><div></div></div>
+			<pre class="hljs"><code class="js">
+await client.resizeZone(1, 2, 45)
+			</code></pre>
+		</div>
+	</div>
+
+	<div id="action-bar">
+		<div class="action-content"></div>
+		<div class="close" id="action-bar-close"></div>
+	</div>
+</body>
+</html>

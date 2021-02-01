@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>openrgb: utils</title>
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="MobileOptimized" content="20" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad()</script>
+
+	<link rel="stylesheet" href="../../main.css">
+	<link rel="stylesheet" href="../../lightmode.css">
+
+	<script src="../../load.js"></script>
+	<script src="../../main.js"></script>
+</head>
+<body>
+	
+	<div id="extend-navigator"><div></div><div></div></div>
+	<div id="navigator">
+		<a href="/openrgb/" id="navigator-heading">Navigation</a>
+		<div id="navigator-list">
+			<a href="/openrgb/client/" class="navigator-top">Client</a>
+			<a href="/openrgb/device/" class="navigator-top">Device</a>
+			<a href="/openrgb/utils/" class="navigator-top">utils</a>
+			<div class="navigator-divider"></div>
+			<a href="/openrgb/objects/" class="navigator-top navigator-extra">objects</a>
+		</div>
+		<div id="navigator-border"></div>
+	</div>
+	<div id="navigator-overlay"></div>
+
+	<div id="doc">
+		<div id="doc-heading">utils</div>
+
+		<div id="content">
+			<div id="toc">
+				<div class="toc-item">
+					<div class="toc-heading">methods</div>
+					<div class="toc-content">
+						<a href="#color">color</a>
+						<a href="#hexcolor">hexColor</a>
+						<a href="#hslcolor">HSLColor</a>
+						<a href="#hsvcolor">HSVColor</a>
+					</div>
+				</div>
+				<div class="toc-item">
+					<div class="toc-heading">properties</div>
+					<div class="toc-content">
+						<a href="#command">command</a>
+						<a href="#deviceType">deviceType</a>
+						<a href="#direction">direction</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="sub-content">
+				<div id="color" class="sub-content-header">.color(red, green, blue)</div>
+				<div class="sub-content-content">
+					<div>returns rgb object</div>
+					<table class="utils-table table">
+						<tr>
+							<th>parameter</th>
+							<th>type</th>
+							<th>optional</th>
+							<th>default</th>
+						</tr>
+						<tr>
+							<td>red</td>
+							<td>integer[0,255]</td>
+							<td>y</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>green</td>
+							<td>integer[0,255]</td>
+							<td>y</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>blue</td>
+							<td>integer[0,255]</td>
+							<td>y</td>
+							<td>0</td>
+						</tr>
+					</table>
+					<div class="property-type">returns: <div class="property-highlight"><a class="property-link" href="/openrgb/objects/#color">color</a></div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+let teal = utils.color(0, 128, 128)
+				</code></pre>
+			</div>
+
+			<div class="sub-content">
+				<div id="hexcolor" class="sub-content-header">.hexColor(hex)</div>
+				<div class="sub-content-content">
+					<div>converts hex to rgb</div>
+					<table class="utils-table table">
+						<tr>
+							<th>parameter</th>
+							<th>type</th>
+							<th>optional</th>
+							<th>default</th>
+						</tr>
+						<tr>
+							<td>hex</td>
+							<td>string</td>
+							<td>y</td>
+							<td>0</td>
+						</tr>
+					</table>
+					<div class="property-type">returns: <div class="property-highlight"><a class="property-link" href="/openrgb/objects/#color">color</a></div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+let teal = utils.hexColor("#008080")
+				</code></pre>
+			</div>
+			
+			<div class="sub-content">
+				<div id="hslcolor" class="sub-content-header">.HSLColor(red, green, blue)</div>
+				<div class="sub-content-content">
+					<div>converts hsl to rgb</div>
+					<table class="utils-table table">
+						<tr>
+							<th>parameter</th>
+							<th>type</th>
+							<th>optional</th>
+							<th>default</th>
+						</tr>
+						<tr>
+							<td>hue</td>
+							<td>integer[0,360]</td>
+							<td>y</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>saturation</td>
+							<td>integer[0,1]</td>
+							<td>y</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>lighness</td>
+							<td>integer[0,1]</td>
+							<td>y</td>
+							<td>0</td>
+						</tr>
+					</table>
+					<div class="property-type">returns: <div class="property-highlight"><a class="property-link" href="/openrgb/objects/#color">color</a></div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+let teal = utils.HSLColor(180, 1, 0.251)
+				</code></pre>
+			</div>
+
+			<div class="sub-content">
+				<div id="hsvcolor" class="sub-content-header">.HSVColor(red, green, blue)</div>
+				<div class="sub-content-content">
+					<div>converts hsv to rgb</div>
+					<table class="utils-table table">
+						<tr>
+							<th>parameter</th>
+							<th>type</th>
+							<th>optional</th>
+							<th>default</th>
+						</tr>
+						<tr>
+							<td>hue</td>
+							<td>integer[0,360]</td>
+							<td>y</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>saturation</td>
+							<td>integer[0,1]</td>
+							<td>y</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>value</td>
+							<td>integer[0,1]</td>
+							<td>y</td>
+							<td>0</td>
+						</tr>
+					</table>
+					<div class="property-type">returns: <div class="property-highlight"><a class="property-link" href="/openrgb/objects/#color">color</a></div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+let teal = utils.HSLColor(180, 1, 0.502)
+				</code></pre>
+			</div>
+
+	</div>
+
+	<div id="action-bar">
+		<div class="action-content"></div>
+		<div class="close" id="action-bar-close"></div>
+	</div>
+</body>
+</html>
