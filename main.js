@@ -1,3 +1,8 @@
+let lightdark = document.cookie.split(";").map(el => el.split("=")).find(el => el[0] == "lightdark")
+lightdark = lightdark ? lightdark[1] : "lightmode"
+$("head").first().append(`<link id=\"theme\" rel=\"stylesheet\" href=\"${window.origin}/${lightdark}.css\">`)
+console.log(document.cookie)
+
 async function copy (el) {
 	let text = $(el).text()
 
@@ -29,4 +34,13 @@ function toggleCode (el) {
 function toggleNavigator (change) {
 	$("#navigator-overlay").css("display", change == "off" ? "none" : "block")
 	$("#navigator").css("display", change == "off" ? "none" : "block")
+}
+
+function toggleLightDark () {
+	let lightdark = document.cookie.split(";").map(el => el.split("=")).find(el => el[0] == "lightdark")
+	lightdark = lightdark ? lightdark[1] == "lightmode" ? "darkmode" : "lightmode" : "darkmode"
+
+	document.cookie = `lightdark=${lightdark}`
+
+	$("#theme").attr("href", `${window.origin}/${lightdark}.css`)
 }

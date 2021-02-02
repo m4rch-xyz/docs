@@ -12,4 +12,9 @@ window.onload = function () {
 
 	$("#extend-navigator").on("click", el => toggleNavigator("on"))
 	$("#navigator-overlay").on("click", el => toggleNavigator("off"))
+
+	$(".project").css("transition", "0.4s")
+
+	$("#lightdark").on("click", toggleLightDark)
+	$("#lightdark").css("transition", "0.4s")
 }

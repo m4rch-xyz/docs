@@ -504,3 +504,23 @@ pre.hljs code {
 #action-bar-close:after {
 	transform: rotate(-45deg);
 }
+
+/* - LIGHTDARK - */
+
+#lightdark {
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	height: 44px;
+	width: 44px;
+
+	cursor: pointer;
+
+	border-radius: 50%;
+	box-shadow: inset 20px 0 var(--lightdark);
+	background: none;
+}
+
+#lightdark:hover {
+	box-shadow: inset 20px 0 var(--lightdark-focus);
+}

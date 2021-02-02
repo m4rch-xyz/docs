@@ -52,3 +52,23 @@ body {
 	width: 80%;
 	margin: 40px 10%;
 }
+
+/* - LIGHTDARK - */
+
+#lightdark {
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	height: 44px;
+	width: 44px;
+
+	cursor: pointer;
+
+	border-radius: 50%;
+	box-shadow: inset 20px 0 var(--lightdark);
+	background: none;
+}
+
+#lightdark:hover {
+	box-shadow: inset 20px 0 var(--lightdark-focus);
+}

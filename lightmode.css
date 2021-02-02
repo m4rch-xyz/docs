@@ -56,6 +56,10 @@
 	--actionbar-background: #7fff00;
 	--actionbar-cross: #333;
 
+	/* lightdark */
+	--lightdark: #333333;
+	--lightdark-focus: #008080;
+
 	/* index */
 	--index-project-background: #f2f2f2;
 	--index-project-background-focus: #00808033;

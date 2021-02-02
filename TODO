@@ -1,5 +1,5 @@
 [ content ]
 	- photon
-[ ui ]
-	- darkmode
-	- toggle darkmode
+	- utils properties
+[ bugs ]
+	- cookies are not properly synchronised
