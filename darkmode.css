@@ -15,7 +15,7 @@
 	--navigator-heading-focus: #992c34;
 
 	--navigator-extend-border: #b03634;
-	--navigator-extend-background: #00000f; /*Todo*/
+	--navigator-extend-background: #00000f; /* TODO */
 	--navigator-extend-lines: #b03634;
 
 	--navigator-item: #282c34;
@@ -26,15 +26,18 @@
 	--navigator-divider: #999999;
 
 	/* table of content */
-	--toc-heading-border: #992c34; /*Todo*/
-	--toc-background-focus: #992c3466; /*Todo*/
+	--toc-heading-border: #992c34;
+	--toc-background-focus: #992c3466;
 
 	/* CONTENT */
+	/* header */
+	--content-heading-border: #992c3489;
+
 	/* content */
-	--content-border-left: #992c3444; /*Todo*/
-	--content-border-left-focus: #992c34bb; /*Todo*/
-	--content-link: #008080e6; /*Todo*/
-	--content-link-focus: #005050; /*Todo*/
+	--content-border-left: #992c3444;
+	--content-border-left-focus: #992c34bb;
+	--content-link: #008080e6;
+	--content-link-focus: #005050;
 
 	/* table */
 	--table-heading-background: #b03434;

@@ -29,6 +29,9 @@
 	--toc-background-focus: #00808033;
 
 	/* CONTENT */
+	/* header */
+	--content-heading-border: #008080aa;
+
 	/* content */
 	--content-border-left: #00808033;
 	--content-border-left-focus: #008080e6;

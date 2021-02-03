@@ -10,8 +10,8 @@ window.onload = function () {
 	$("#navigator-heading").css("transition", "0.4s")
 	$(".navigator-top").css("transition", "0.4s")
 
-	$("#extend-navigator").on("click", el => toggleNavigator("on"))
-	$("#navigator-overlay").on("click", el => toggleNavigator("off"))
+	$("#extend-navigator").on("click", () => toggleNavigator("on"))
+	$("#navigator-overlay").on("click", () => toggleNavigator("off"))
 
 	$(".project").css("transition", "0.4s")
 

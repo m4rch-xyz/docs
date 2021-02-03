@@ -55,11 +55,13 @@
 				</div>
 			</div>
 
+			<div class="sub-header">methods</div>
+
 			<div class="sub-content">
 				<div id="constructor" class="constructor sub-content-header">constructor(host, port, name)</div>
 				<div class="sub-content-content">
 					<div>constructs a new openrgb Client</div>
-					<table class="function-table table">
+					<table class="five-table table">
 						<tr>
 							<th>parameter</th>
 							<th>type</th>
@@ -136,7 +138,7 @@ let amount = await client.getControllerCount()
 				<div id="getControllerData" class="sub-content-header">.getControllerData(deviceId)</div>
 				<div class="sub-content-content">
 					<div>returns device data of specified device</div>
-					<table class="function-table table">
+					<table class="four-table table">
 						<tr>
 							<th>parameter</th>
 							<th>type</th>
@@ -174,7 +176,7 @@ let protocol = await client.getProtocolVersion()
 				<div id="updateLeds" class="sub-content-header">.updateLeds(deviceId, colors)</div>
 				<div class="sub-content-content">
 					<div>updates leds with the given colors</div>
-					<table class="function-table table">
+					<table class="four-table table">
 						<tr>
 							<th>parameter</th>
 							<th>type</th>
@@ -206,7 +208,7 @@ await client.updateLeds(1, Array(device.colors.count).fill({red: 0, green: 128, 
 				<div id="updateZoneLeds" class="sub-content-header">.updateZoneLeds(deviceId, zoneId, colors)</div>
 				<div class="sub-content-content">
 					<div>updates leds of specific zone with the given colors</div>
-					<table class="function-table table">
+					<table class="four-table table">
 						<tr>
 							<th>parameter</th>
 							<th>type</th>
@@ -243,7 +245,7 @@ await client.updateZoneLeds(1, 2, Array(device.zones[2].ledsCount).fill({red: 0,
 				<div id="setCustomMode" class="sub-content-header">.updateMode(deviceId)</div>
 				<div class="sub-content-content">
 					<div>changes the mode of the device to a specific mode</div>
-					<table class="function-table table">
+					<table class="four-table table">
 						<tr>
 							<th>parameter</th>
 							<th>type</th>
@@ -274,7 +276,7 @@ await client.setCustomMode(1)
 				<div id="setCustomMode" class="sub-content-header">.setCustomMode(deviceId)</div>
 				<div class="sub-content-content">
 					<div>Sets the device to its mode for individual led control (or an equivalent)</div>
-					<table class="function-table table">
+					<table class="four-table table">
 						<tr>
 							<th>parameter</th>
 							<th>type</th>
@@ -300,7 +302,7 @@ await client.setCustomMode(1)
 				<div id="resizeZone" class="sub-content-header">.resizeZone(deviceId, zoneId, zoneLength)</div>
 				<div class="sub-content-content">
 					<div>changes the amount of leds of a zone</div>
-					<table class="function-table table">
+					<table class="four-table table">
 						<tr>
 							<th>parameter</th>
 							<th>type</th>

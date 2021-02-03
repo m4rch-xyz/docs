@@ -6,7 +6,7 @@ async function copy (el) {
 	let text = $(el).text()
 
 	navigator.clipboard.writeText(text)
-	console.log("code snippet copied")
+	console.log("code-snippet copied")
 
 	action("code-snippet copied", 5000)
 }

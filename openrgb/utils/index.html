@@ -45,6 +45,7 @@
 						<a href="#hexcolor">hexColor</a>
 						<a href="#hslcolor">HSLColor</a>
 						<a href="#hsvcolor">HSVColor</a>
+						<a href="#randomcolor">randomColor</a>
 					</div>
 				</div>
 				<div class="toc-item">
@@ -56,12 +57,14 @@
 					</div>
 				</div>
 			</div>
+
+			<div class="sub-header">methods</div>
 			
 			<div class="sub-content">
 				<div id="color" class="sub-content-header">.color(red, green, blue)</div>
 				<div class="sub-content-content">
 					<div>returns rgb object</div>
-					<table class="utils-table table">
+					<table class="four-table table">
 						<tr>
 							<th>parameter</th>
 							<th>type</th>
@@ -99,7 +102,7 @@ let teal = utils.color(0, 128, 128)
 				<div id="hexcolor" class="sub-content-header">.hexColor(hex)</div>
 				<div class="sub-content-content">
 					<div>converts hex to rgb</div>
-					<table class="utils-table table">
+					<table class="four-table table">
 						<tr>
 							<th>parameter</th>
 							<th>type</th>
@@ -125,7 +128,7 @@ let teal = utils.hexColor("#008080")
 				<div id="hslcolor" class="sub-content-header">.HSLColor(red, green, blue)</div>
 				<div class="sub-content-content">
 					<div>converts hsl to rgb</div>
-					<table class="utils-table table">
+					<table class="four-table table">
 						<tr>
 							<th>parameter</th>
 							<th>type</th>
@@ -163,7 +166,7 @@ let teal = utils.HSLColor(180, 1, 0.251)
 				<div id="hsvcolor" class="sub-content-header">.HSVColor(red, green, blue)</div>
 				<div class="sub-content-content">
 					<div>converts hsv to rgb</div>
-					<table class="utils-table table">
+					<table class="four-table table">
 						<tr>
 							<th>parameter</th>
 							<th>type</th>
@@ -197,6 +200,195 @@ let teal = utils.HSLColor(180, 1, 0.502)
 				</code></pre>
 			</div>
 
+			<div class="sub-content">
+				<div id="randomcolor" class="sub-content-header">.randomColor()</div>
+				<div class="sub-content-content">
+					<div>creates a random color</div>
+					<div class="property-type">returns: <div class="property-highlight"><a class="property-link" href="/openrgb/objects/#color">color</a></div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+let random = utils.randomColor()
+				</code></pre>
+			</div>
+
+			<div class="sub-header">properties</div>
+
+			<div class="sub-content">
+				<div id="command" class="sub-content-header">.commands</div>
+				<div class="sub-content-content">
+					<div>an object containing the values for all the openrgb commands</div>
+					<table class="two-table table">
+						<tr>
+							<th>parameter</th>
+							<th>value</th>
+						</tr>
+						<tr>
+							<td>requestControllerCount</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>requestControllerData</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>requestProtocolVersion</td>
+							<td>40</td>
+						</tr>
+						<tr>
+							<td>setClientName</td>
+							<td>50</td>
+						</tr>
+						<tr>
+							<td>deviceListUpdated</td>
+							<td>100</td>
+						</tr>
+						<tr>
+							<td>resizeZone</td>
+							<td>1000</td>
+						</tr>
+						<tr>
+							<td>updateLeds</td>
+							<td>1050</td>
+						</tr>
+						<tr>
+							<td>updateZoneLeds</td>
+							<td>1051</td>
+						</tr>
+						<tr>
+							<td>updateSingleLed</td>
+							<td>1052</td>
+						</tr>
+						<tr>
+							<td>setCustomMode</td>
+							<td>1100</td>
+						</tr>
+						<tr>
+							<td>updateMode</td>
+							<td>1101</td>
+						</tr>
+					</table>
+					<div class="property-type">type: <div class="property-highlight">object</div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+let commands = utils.command
+				</code></pre>
+			</div>
+
+			<div class="sub-content">
+				<div id="command" class="sub-content-header">.deviceType</div>
+				<div class="sub-content-content">
+					<div>converts hsv to rgb</div>
+					<table class="two-table table">
+						<tr>
+							<th>parameter</th>
+							<th>value</th>
+						</tr>
+						<tr>
+							<td>motherboard</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>dram</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>gpu</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td>cooler</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>ledstrip</td>
+							<td>4</td>
+						</tr>
+						<tr>
+							<td>keyboard</td>
+							<td>5</td>
+						</tr>
+						<tr>
+							<td>mouse</td>
+							<td>6</td>
+						</tr>
+						<tr>
+							<td>mousemat</td>
+							<td>7</td>
+						</tr>
+						<tr>
+							<td>headset</td>
+							<td>8</td>
+						</tr>
+						<tr>
+							<td>headsetStand</td>
+							<td>9</td>
+						</tr>
+						<tr>
+							<td>gamepad</td>
+							<td>10</td>
+						</tr>
+						<tr>
+							<td>light</td>
+							<td>11</td>
+						</tr>
+						<tr>
+							<td>unknown</td>
+							<td>12</td>
+						</tr>
+					</table>
+					<div class="property-type">type: <div class="property-highlight">object</div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+let deviceTypes = utils.deviceType
+				</code></pre>
+			</div>
+			
+			<div class="sub-content">
+				<div id="direction" class="sub-content-header">.direction</div>
+				<div class="sub-content-content">
+					<div>an object containing the values for all the openrgb commands</div>
+					<table class="two-table table">
+						<tr>
+							<th>parameter</th>
+							<th>value</th>
+						</tr>
+						<tr>
+							<td>left</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>right</td>
+							<td>1</td>
+						</tr>
+						<tr>
+							<td>up</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td>down</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>horizontal</td>
+							<td>4</td>
+						</tr>
+						<tr>
+							<td>vertical</td>
+							<td>5</td>
+						</tr>
+					</table>
+					<div class="property-type">type: <div class="property-highlight">object</div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
+let directions = utils.direction
+				</code></pre>
+			</div>
+
+		</div>
 	</div>
 
 	<div id="action-bar">
