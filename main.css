@@ -364,20 +364,24 @@ body {
 	text-align: center;
 }
 
-.four-table th:last-child, .four-table td:last-child {
+.two-table th, .two-table td {
 	width: 50%;
 }
 
-.five-table th, .five-table td {
-	width: 20%;
+.three-table th, .three-table td {
+	width: 25%;
+}
+
+.three-table th:last-child, .three-table td:last-child {
+	width: 50%;
 }
 
 .four-table th, .four-table td {
 	width: 25%;
 }
 
-.two-table th, .two-table td {
-	width: 50%;
+.five-table th, .five-table td {
+	width: 20%;
 }
 
 .table th {
@@ -414,6 +418,10 @@ body {
 
 .property-link {
 	color: var(--property-link) !important;
+}
+
+.property-link:hover {
+	color: var(--property-link-focus) !important;
 }
 
 /* code */

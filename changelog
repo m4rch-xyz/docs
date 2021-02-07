@@ -1,0 +1,12 @@
+( v 2021-02-07 )
+[ content ]
+	- changed "integer" to "int"
+	- changed wrong placed "integer"s to "float"s
+[ ui ]
+	- link color
+	- link hover for property link
+[ fixes ]
+	- spacing issue in mobile
+[ misc ]
+	- added changelog
+	- restructured, commented and added whitespace

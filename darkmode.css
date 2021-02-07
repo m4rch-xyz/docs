@@ -36,6 +36,7 @@
 	/* content */
 	--content-border-left: #992c3444;
 	--content-border-left-focus: #992c34bb;
+
 	--content-link: #008080e6;
 	--content-link-focus: #005050;
 
@@ -47,9 +48,12 @@
 	/* type / return */
 	--property-background: #182127;
 	--property-text: #dddddd;
+
 	--property-highlight: #00808099;
 	--property-highlight-value:#ff4500d0;
+
 	--property-link: #bb2000;
+	--property-link-focus: #ff2a00;
 
 	/* code */
 	--code-extend: #992c3433;

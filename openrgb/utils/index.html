@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>openrgb: utils</title>
-	<meta name="HandheldFriendly" content="true" />
-	<meta name="MobileOptimized" content="20" />
+	<title>openrgb-sdk: utils</title>
+
+	<meta name="HandheldFriendly" content="true">
+	<meta name="MobileOptimized" content="20">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
 	<script>hljs.initHighlightingOnLoad()</script>
 
@@ -73,19 +73,19 @@
 						</tr>
 						<tr>
 							<td>red</td>
-							<td>integer[0,255]</td>
+							<td>int[0,255]</td>
 							<td>y</td>
 							<td>0</td>
 						</tr>
 						<tr>
 							<td>green</td>
-							<td>integer[0,255]</td>
+							<td>int[0,255]</td>
 							<td>y</td>
 							<td>0</td>
 						</tr>
 						<tr>
 							<td>blue</td>
-							<td>integer[0,255]</td>
+							<td>int[0,255]</td>
 							<td>y</td>
 							<td>0</td>
 						</tr>
@@ -137,19 +137,19 @@ let teal = utils.hexColor("#008080")
 						</tr>
 						<tr>
 							<td>hue</td>
-							<td>integer[0,360]</td>
+							<td>float[0,360]</td>
 							<td>y</td>
 							<td>0</td>
 						</tr>
 						<tr>
 							<td>saturation</td>
-							<td>integer[0,1]</td>
+							<td>float[0,1]</td>
 							<td>y</td>
 							<td>0</td>
 						</tr>
 						<tr>
 							<td>lighness</td>
-							<td>integer[0,1]</td>
+							<td>float[0,1]</td>
 							<td>y</td>
 							<td>0</td>
 						</tr>
@@ -175,19 +175,19 @@ let teal = utils.HSLColor(180, 1, 0.251)
 						</tr>
 						<tr>
 							<td>hue</td>
-							<td>integer[0,360]</td>
+							<td>float[0,360]</td>
 							<td>y</td>
 							<td>0</td>
 						</tr>
 						<tr>
 							<td>saturation</td>
-							<td>integer[0,1]</td>
+							<td>float[0,1]</td>
 							<td>y</td>
 							<td>0</td>
 						</tr>
 						<tr>
 							<td>value</td>
-							<td>integer[0,1]</td>
+							<td>float[0,1]</td>
 							<td>y</td>
 							<td>0</td>
 						</tr>
@@ -395,5 +395,6 @@ let directions = utils.direction
 		<div class="action-content"></div>
 		<div class="close" id="action-bar-close"></div>
 	</div>
+	
 </body>
 </html>

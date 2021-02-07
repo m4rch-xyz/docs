@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>openrgb: class Client</title>
-	<meta name="HandheldFriendly" content="true" />
-	<meta name="MobileOptimized" content="20" />
+	<title>openrgb-sdk: Client</title>
+
+	<meta name="HandheldFriendly" content="true">
+	<meta name="MobileOptimized" content="20">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
 	<script>hljs.initHighlightingOnLoad()</script>
 
@@ -37,6 +37,7 @@
 		<div id="doc-heading">class Client</div>
 
 		<div id="content">
+
 			<div id="toc">
 				<div class="toc-item">
 					<div class="toc-heading">methods</div>
@@ -78,7 +79,7 @@
 						</tr>
 						<tr>
 							<td>port</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>y</td>
 							<td>6742</td>
 							<td>port of sdk server</td>
@@ -147,7 +148,7 @@ let amount = await client.getControllerCount()
 						</tr>
 						<tr>
 							<td>deviceId</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>n</td>
 							<td>device index</td>
 						</tr>
@@ -185,7 +186,7 @@ let protocol = await client.getProtocolVersion()
 						</tr>
 						<tr>
 							<td>deviceId</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>n</td>
 							<td>device index</td>
 						</tr>
@@ -217,13 +218,13 @@ await client.updateLeds(1, Array(device.colors.count).fill({red: 0, green: 128, 
 						</tr>
 						<tr>
 							<td>deviceId</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>n</td>
 							<td>device index</td>
 						</tr>
 						<tr>
 							<td>zoneId</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>n</td>
 							<td>zone index for device</td>
 						</tr>
@@ -241,6 +242,7 @@ await client.updateLeds(1, Array(device.colors.count).fill({red: 0, green: 128, 
 await client.updateZoneLeds(1, 2, Array(device.zones[2].ledsCount).fill({red: 0, green: 128, blue: 128}))
 				</code></pre>
 			</div>
+
 			<div class="sub-content">
 				<div id="setCustomMode" class="sub-content-header">.updateMode(deviceId)</div>
 				<div class="sub-content-content">
@@ -254,13 +256,13 @@ await client.updateZoneLeds(1, 2, Array(device.zones[2].ledsCount).fill({red: 0,
 						</tr>
 						<tr>
 							<td>deviceId</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>n</td>
 							<td>device index</td>
 						</tr>
 						<tr>
 							<td>mode</td>
-							<td>integer|string</td>
+							<td>int|string</td>
 							<td>n</td>
 							<td>either name or id of a mode</td>
 						</tr>
@@ -272,6 +274,7 @@ await client.updateZoneLeds(1, 2, Array(device.zones[2].ledsCount).fill({red: 0,
 await client.setCustomMode(1)
 				</code></pre>
 			</div>
+
 			<div class="sub-content">
 				<div id="setCustomMode" class="sub-content-header">.setCustomMode(deviceId)</div>
 				<div class="sub-content-content">
@@ -285,7 +288,7 @@ await client.setCustomMode(1)
 						</tr>
 						<tr>
 							<td>deviceId</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>n</td>
 							<td>device index</td>
 						</tr>
@@ -311,29 +314,31 @@ await client.setCustomMode(1)
 						</tr>
 						<tr>
 							<td>deviceId</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>n</td>
 							<td>device index</td>
 						</tr>
 						<tr>
 							<td>zoneId</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>n</td>
 							<td>zone index for device</td>
 						</tr>
 						<tr>
 							<td>zoneLength</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>n</td>
 							<td>new amount of leds</td>
 						</tr>
 					</table>
-				<div class="property-type">returns: <div class="property-highlight">Promise&lt;&gt;</div></div>
-			</div>
-			<div class="extend-code"><div></div></div>
-			<pre class="hljs"><code class="js">
+					<div class="property-type">returns: <div class="property-highlight">Promise&lt;&gt;</div></div>
+				</div>
+				<div class="extend-code"><div></div></div>
+				<pre class="hljs"><code class="js">
 await client.resizeZone(1, 2, 45)
-			</code></pre>
+				</code></pre>
+			</div>
+
 		</div>
 	</div>
 
@@ -341,5 +346,6 @@ await client.resizeZone(1, 2, 45)
 		<div class="action-content"></div>
 		<div class="close" id="action-bar-close"></div>
 	</div>
+	
 </body>
 </html>

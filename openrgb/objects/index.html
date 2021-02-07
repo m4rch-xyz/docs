@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>openrgb: objects</title>
-	<meta name="HandheldFriendly" content="true" />
-	<meta name="MobileOptimized" content="20" />
+	<title>openrgb-sdk: objects</title>
+
+	<meta name="HandheldFriendly" content="true">
+	<meta name="MobileOptimized" content="20">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
+	<script>hljs.initHighlightingOnLoad()</script>
 
 	<link rel="stylesheet" href="../../main.css">
 
@@ -56,7 +56,7 @@
 				<div id="color" class="sub-content-header">color</div>
 				<div class="sub-content-content">
 					<div>an object containing the 3 rgb values</div>
-					<table class="four-table table">
+					<table class="three-table table">
 						<tr>
 							<th>parameter</th>
 							<th>type</th>
@@ -64,17 +64,17 @@
 						</tr>
 						<tr>
 							<td>red</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>the value for red in the additive rgb-model</td>
 						</tr>
 						<tr>
 							<td>green</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>the value for green in the additive rgb-model</td>
 						</tr>
 						<tr>
 							<td>blue</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>the value for blue in the additive rgb-model</td>
 						</tr>
 					</table>
@@ -85,7 +85,7 @@
 				<div id="led" class="sub-content-header">led</div>
 				<div class="sub-content-content">
 					<div>an object containing all the values for an led</div>
-					<table class="four-table table">
+					<table class="three-table table">
 						<tr>
 							<th>parameter</th>
 							<th>type</th>
@@ -109,7 +109,7 @@
 				<div id="mode" class="sub-content-header">mode</div>
 				<div class="sub-content-content">
 					<div>an object containing all the values for a native mode of the device</div>
-					<table class="four-table table">
+					<table class="three-table table">
 						<tr>
 							<th>parameter</th>
 							<th>type</th>
@@ -117,7 +117,7 @@
 						</tr>
 						<tr>
 							<td>id</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>mode index</td>
 						</tr>
 						<tr>
@@ -127,52 +127,52 @@
 						</tr>
 						<tr>
 							<td>value</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>mode identifier</td>
 						</tr>
 						<tr>
 							<td>flags</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>????</td>
 						</tr>
 						<tr>
 							<td>speedMin</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>minimum speed the mode can be set to</td>
 						</tr>
 						<tr>
 							<td>speedMax</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>maximum speed the mode can be set to</td>
 						</tr>
 						<tr>
 							<td>colorMin</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>minimum colors for this mode, if fewer rest defaults to black</td>
 						</tr>
 						<tr>
 							<td>colorMax</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>maximum colors for this mode</td>
 						</tr>
 						<tr>
 							<td>speed</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>speed the mode is currently set to</td>
 						</tr>
 						<tr>
 							<td>direction</td>
-							<td>integer</td>
-							<td>direction the mode is currently set to ????</td>
+							<td>int</td>
+							<td><a href="/openrgb/utils/#direction">direction</a> the mode is currently set to</td>
 						</tr>
 						<tr>
 							<td>colorMode</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>????</td>
 						</tr>
 						<tr>
 							<td>colorLength</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>????</td>
 						</tr>
 						<tr>
@@ -194,7 +194,7 @@
 				<div id="zone" class="sub-content-header">zone</div>
 				<div class="sub-content-content">
 					<div>an object containing every values a zone can have</div>
-					<table class="four-table table">
+					<table class="three-table table">
 						<tr>
 							<th>parameter</th>
 							<th>type</th>
@@ -207,27 +207,27 @@
 						</tr>
 						<tr>
 							<td>id</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>zone index</td>
 						</tr>
 						<tr>
 							<td>type</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>????</td>
 						</tr>
 						<tr>
 							<td>ledsMin</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>the minimum amount of leds this zone has to be assigned</td>
 						</tr>
 						<tr>
 							<td>ledsMax</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>the amount of leds this zone can maximally be assigned</td>
 						</tr>
 						<tr>
 							<td>ledsCount</td>
-							<td>integer</td>
+							<td>int</td>
 							<td>the amount of leds currently distributed to this zone</td>
 						</tr>
 						<tr>
@@ -240,6 +240,11 @@
 			</div>
 
 		</div>
+	</div>
+
+	<div id="action-bar">
+		<div class="action-content"></div>
+		<div class="close" id="action-bar-close"></div>
 	</div>
 
 </body>
