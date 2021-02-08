@@ -36,13 +36,13 @@ body {
 	text-decoration: none;
 	color: var(--text-color);
 
-	background-color: var(--index-project-background);
+	background: var(--index-project-background);
 
 	cursor: pointer;
 }
 
 .project:hover {
-	background-color: var(--index-project-background-focus);
+	background: var(--index-project-background-focus);
 }
 
 #projects {

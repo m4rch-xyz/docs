@@ -9,7 +9,7 @@ window.onload = function () {
 
 
 	/* - ACTION-BAR - */
-	$("#action-bar-close").on("click", ({ target }) => $(target).parent().css("display", "none"))
+	$("#action-bar-close").on("click", el => $(el.target).parent().css("display", "none"))
 
 
 	/* - CONTENT - */
@@ -18,8 +18,8 @@ window.onload = function () {
 
 	/* - NAVIGATOR - */
 	// main
-	$("#navigator-heading").css("transition", "0.4s")
-	$(".navigator-top").css("transition", "0.4s")
+	$("#navigator-heading").css("transition", "color 0.4s")
+	$(".navigator-item").css("transition", "background 0.4s")
 
 	// extend
 	$("#extend-navigator").on("click", () => toggleNavigator("on"))
@@ -28,13 +28,13 @@ window.onload = function () {
 
 	/* - LIGHTDARK - */
 	$("#lightdark").on("click", toggleLightDark)
-	$("#lightdark").css("transition", "0.4s")
+	$("#lightdark").css("transition", "box-shadow 0.4s")
 
 
 	/* - LINK - */
-	$("a").css("transition", "color 0.4s")
+	$(".property-link, .table a").css("transition", "color 0.4s")
 
 
 	/* - PROJECT - */
-	$(".project").css("transition", "0.4s")
+	$(".project").css("transition", "background 0.4s")
 }

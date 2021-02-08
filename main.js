@@ -3,7 +3,7 @@ lightdark = lightdark ? lightdark[1] : "lightmode"
 $("head").first().append(`<link id=\"theme\" rel=\"stylesheet\" href=\"${window.origin}/${lightdark}.css\">`)
 
 async function copy (el) {
-	let text = $(el).text()
+	let text = $(el).text().trim()
 
 	navigator.clipboard.writeText(text)
 	console.log("code-snippet copied")

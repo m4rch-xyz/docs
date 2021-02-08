@@ -143,7 +143,7 @@ body {
 	gap: 5px;
 }
 
-.navigator-top {
+.navigator-item {
 	font-size: 20px;
 	text-align: left;
 
@@ -152,7 +152,7 @@ body {
 	background: var(--navigator-item);
 }
 
-.navigator-top:hover {
+.navigator-item:hover {
 	background-color: var(--navigator-item-hover);
 }
 
