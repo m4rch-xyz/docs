@@ -12,7 +12,7 @@
 	--content-divider: #aaaaaa;
 
 	/* navigator */
-	--navigator-heading-focus: #006060;
+	--heading-focus: #0090a0;
 
 	--navigator-extend-border: #000000;
 	--navigator-extend-background: #ffffff;
@@ -59,17 +59,26 @@
 	--code-extend-focus: #00808033;
 	--code-extend-line: #000000;
 
-	/* action bar */
-	--actionbar-background: #7fff00;
-	--actionbar-cross: #333;
-
 	/* lightdark */
 	--lightdark: #333333;
 	--lightdark-focus: #008080;
 
+	/* footer */
+	--footer-color: #333333;
+	--footer-background-focus: #f2f2f2;
+
+	/* action bar */
+	--actionbar-background: #7fff00;
+	--actionbar-cross: #333;
+
 	/* index */
 	--index-project-background: #f2f2f2;
 	--index-project-background-focus: #00808033;
+
+	/* cookies */
+	--cookie-value: #0080a0;
+	--cookie-delete: #ff00001a;
+	--cookie-delete-focus: #ff000066;
 
 	/* - FONT - */
 	--font: monospace, Consolas;

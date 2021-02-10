@@ -1,7 +1,15 @@
-( v 2021-02-07 )
+( v 2021-02-10 )
 [ content ]
+	- cookie information
+	- delete cookies functionality
+	- added links to headers
+	- added footer
 [ ui ]
+	- recolored header focus
+	- projects overflow: scroll
 [ fixes ]
-	- transition issue in navigator
+	- cookies should now be properly synchronised
 [ misc ]
-	- renamed classes
+	- renamed colors
+	- removed unnessecary div from /
+	- renamed variables for clarity

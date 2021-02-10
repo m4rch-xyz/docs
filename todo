@@ -1,8 +1,9 @@
 [ content ]
 	- photon
-	- cookie information
 [ ui ]
 	- improve darkmode
+	- make lightmode less boring
 [ bugs ]
-	- cookies are not properly synchronised
+	- test cookie synch
 [ misc ]
+	- see if valid cookie policy

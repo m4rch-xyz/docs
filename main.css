@@ -44,17 +44,6 @@ body {
 	.five-table td, .five-table th {
 		font-size: 11.5px;
 	}
-
-	/* action bar */
-
-	#action-bar {
-		left: 0 !important;
-		width: 100% !important;
-	}
-
-	#action-bar-close {
-		right: 45px !important;
-	}
 }
 
 @media only screen and (min-width: 801px) {
@@ -98,7 +87,7 @@ body {
 #navigator {
 	position: fixed;
 	top: 0;
-	bottom: 0;
+	bottom: 50px;
 	left: 0;
 	z-index: 2;
 
@@ -110,17 +99,18 @@ body {
 	background: var(--background);
 }
 
-#navigator a {
+a {
 	display: block;
 
-	text-decoration: none;
-
 	color: var(--text-color);
+	text-decoration: none;
 }
 
 /* navigator heading */
 
 #navigator-heading, #doc-heading {
+	display: block;
+
 	margin: 2px 0 12px;
 	padding-bottom: 4px;
 	box-sizing: border-box;
@@ -132,8 +122,8 @@ body {
 	text-align: center;
 }
 
-#navigator-heading:hover {
-	color: var(--navigator-heading-focus);
+#navigator-heading:hover, #doc-heading:hover {
+	color: var(--heading-focus);
 }
 
 /* navigator items */
@@ -167,7 +157,7 @@ body {
 #extend-navigator {
 	position: fixed;
 	left: 0;
-	bottom: 1.5%;
+	bottom: calc(50px + 1.2vh);
 
 	display: grid;
 	gap: 0;
@@ -233,7 +223,7 @@ body {
 #doc {
 	width: 75%;
 	margin-top: 13.5px;
-	padding: 0 10px;
+	padding: 0 10px 50px;
 	box-sizing: border-box;
 }
 
@@ -335,6 +325,7 @@ body {
 }
 
 .sub-content-content a {
+	display: inline;
 	color: var(--content-link);
 	text-decoration: none;
 }
@@ -417,6 +408,7 @@ body {
 }
 
 .property-link {
+	display: inline;
 	color: var(--property-link) !important;
 }
 
@@ -476,10 +468,12 @@ pre.hljs code {
 #action-bar {
 	position: fixed;
 
+	width: 100%;
+
 	bottom: 0;
-	left: 25%;
+	left: 0;
 	right: 0;
-	z-index: 1;
+	z-index: 6;
 
 	height: 2%;
 
@@ -498,7 +492,7 @@ pre.hljs code {
 #action-bar-close {
 	position: absolute;
 
-	right: 20px;
+	right: 45px;
 	top: 10px;
 	width: 30px;
 	height: 30px;
@@ -549,4 +543,52 @@ pre.hljs code {
 
 #lightdark:hover {
 	box-shadow: inset 20px 0 var(--lightdark-focus);
+}
+
+/* NEW */
+
+#footer {
+	position: fixed;
+	bottom: 0;
+
+	box-sizing: border-box;
+	border-top: 2px var(--heading-border) solid;
+
+	height: 50px;
+	left: 12px;
+	right: 12px;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+	z-index: 4;
+}
+
+#footer > * {
+	height: 48px;
+	padding: 7px 0;
+
+	box-sizing: border-box;
+
+	background: var(--background);
+
+	color: var(--footer-color);
+	font-size: 18px;
+	text-align: center;
+}
+
+#footer > *:hover {
+	background: var(--footer-background-focus);
+}
+
+#footer-background {
+	position: fixed;
+	
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	
+	height: 50px;
+
+	background: var(--background);
 }

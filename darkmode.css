@@ -12,7 +12,7 @@
 	--content-divider: #000000;
 
 	/* navigator */
-	--navigator-heading-focus: #992c34;
+	--heading-focus: #992c34;
 
 	--navigator-extend-border: #b03634;
 	--navigator-extend-background: #00000f; /* TODO */
@@ -59,18 +59,27 @@
 	--code-extend: #992c3433;
 	--code-extend-focus: #992c3466;
 	--code-extend-line: #ffffff;
+	
+	/* lightdark */
+	--lightdark: #ffffff;
+	--lightdark-focus: #992c3466;
+
+	/* footer */
+	--footer-color: #ffffff;
+	--footer-background-focus: #282c34;
 
 	/* action bar */
 	--actionbar-background: #800000;
 	--actionbar-cross: #333;
 
-	/* lightdark */
-	--lightdark: #ffffff;
-	--lightdark-focus: #992c3466;
-
 	/* index */
 	--index-project-background: #282c34;
 	--index-project-background-focus: #992c3466;
+	
+	/* cookies */
+	--cookie-value: #00a0d0;
+	--cookie-delete: #600000;
+	--cookie-delete-focus: #a00000;
 
 	/* - FONT - */
 	--font: monospace;

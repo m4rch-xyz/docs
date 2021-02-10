@@ -39,7 +39,10 @@ function toggleLightDark () {
 	let lightdark = document.cookie.split(";").map(el => el.split("=")).find(el => el[0] == "lightdark")
 	lightdark = lightdark ? lightdark[1] == "lightmode" ? "darkmode" : "lightmode" : "darkmode"
 
-	document.cookie = `lightdark=${lightdark}`
+	document.cookie.split(";").forEach(c => document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"))
+	document.cookie = `lightdark=${lightdark};path=/`
+
+	if (window.location.pathname == "/cookies/") setTimeout(loadActiveCookies, 200)
 
 	$("#theme").attr("href", `${window.origin}/${lightdark}.css`)
 }
