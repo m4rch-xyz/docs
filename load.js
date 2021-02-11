@@ -1,3 +1,5 @@
+$("head").first().append(`<link id=\"theme\" rel=\"stylesheet\" href=\"${window.origin}/${$.cookie.get("lightdark") || "lightmode"}.css\">`)
+
 window.onload = function () {
 	/* - CODE - */
 	// main
@@ -6,6 +8,7 @@ window.onload = function () {
 	// extend
 	$(".extend-code").on("click", ev => toggleCode(ev.target))
 	$(".extend-code").css("transition", "1s")
+
 
 	/* - HEADING - */
 	$("#heading, #doc-heading").css("transition", "color 0.4s")
@@ -45,7 +48,6 @@ window.onload = function () {
 	/* - PROJECT - */
 	$(".project").css("transition", "background 0.4s")
 
-	/* COOKIES */
+	/* - COOKIES - */
 	if (window.location.pathname == "/cookies/") loadActiveCookies()
-	console.log(document.cookie)
 }

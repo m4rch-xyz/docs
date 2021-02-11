@@ -1,15 +1,12 @@
-( v 2021-02-10 )
+( v 2021-02-11 )
 [ content ]
-	- cookie information
-	- delete cookies functionality
-	- added links to headers
-	- added footer
+	- typo in /openrgb/utils/
 [ ui ]
-	- recolored header focus
-	- projects overflow: scroll
+	- action for cookie deletion
 [ fixes ]
-	- cookies should now be properly synchronised
 [ misc ]
-	- renamed colors
-	- removed unnessecary div from /
-	- renamed variables for clarity
+	- added action bar to cookies
+	- added action bar to index.css
+	- moved theme adding on load to load.js
+	- restructured css files
+	- changed jquery path

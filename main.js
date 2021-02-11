@@ -1,9 +1,7 @@
-let lightdark = document.cookie.split(";").map(el => el.split("=")).find(el => el[0] == "lightdark")
-lightdark = lightdark ? lightdark[1] : "lightmode"
-$("head").first().append(`<link id=\"theme\" rel=\"stylesheet\" href=\"${window.origin}/${lightdark}.css\">`)
-
 async function copy (el) {
 	let text = $(el).text().trim()
+
+	document.cookie = `copy=true;path=/`
 
 	navigator.clipboard.writeText(text)
 	console.log("code-snippet copied")
@@ -36,13 +34,9 @@ function toggleNavigator (change) {
 }
 
 function toggleLightDark () {
-	let lightdark = document.cookie.split(";").map(el => el.split("=")).find(el => el[0] == "lightdark")
-	lightdark = lightdark ? lightdark[1] == "lightmode" ? "darkmode" : "lightmode" : "darkmode"
-
-	document.cookie.split(";").forEach(c => document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"))
-	document.cookie = `lightdark=${lightdark};path=/`
-
-	if (window.location.pathname == "/cookies/") setTimeout(loadActiveCookies, 200)
+	let lightdark = $.cookie.get("lightdark") == "darkmode" ? "lightmode" : "darkmode"
+	$.cookie.set("lightdark", lightdark)
 
 	$("#theme").attr("href", `${window.origin}/${lightdark}.css`)
+	if (window.location.pathname == "/cookies/") setTimeout(loadActiveCookies, 200)
 }
