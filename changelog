@@ -1,12 +1,9 @@
-( v 2021-02-11 )
+( v 2021-02-16 )
 [ content ]
-	- typo in /openrgb/utils/
+	- added no-cookie information to /cookies/
 [ ui ]
-	- action for cookie deletion
+	- slight color adjustments in lightmode and darkmode
 [ fixes ]
+	- turned session cookies for darkmode into 1-year cookies
 [ misc ]
-	- added action bar to cookies
-	- added action bar to index.css
-	- moved theme adding on load to load.js
-	- restructured css files
-	- changed jquery path
+	- made whitespace more consistent

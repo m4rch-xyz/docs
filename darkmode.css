@@ -1,6 +1,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/atom-one-dark.min.css");
 
 :root {
+
 	/* - COLOR - */
 	/* general */
 	--background: #21252b;
@@ -12,17 +13,17 @@
 	--content-divider: #000000;
 
 	/* navigator */
-	--heading-focus: #992c34;
+	--heading-focus: #be2c34;
 
 	--navigator-extend-border: #b03634;
-	--navigator-extend-background: #00000f; /* TODO */
+	--navigator-extend-background: #121518; /* TODO */
 	--navigator-extend-lines: #b03634;
 
 	--navigator-item: #282c34;
 	--navigator-item-hover: #181a1f;
 
 	--navigator-extra-text: #ff4500;
-	
+
 	--navigator-divider: #999999;
 
 	/* table of content */
@@ -59,10 +60,10 @@
 	--code-extend: #992c3433;
 	--code-extend-focus: #992c3466;
 	--code-extend-line: #ffffff;
-	
+
 	/* lightdark */
 	--lightdark: #ffffff;
-	--lightdark-focus: #992c3466;
+	--lightdark-focus: #de2c34aa;
 
 	/* footer */
 	--footer-color: #ffffff;
@@ -75,7 +76,7 @@
 	/* index */
 	--index-project-background: #282c34;
 	--index-project-background-focus: #992c3466;
-	
+
 	/* cookies */
 	--cookie-value: #00a0d0;
 	--cookie-delete: #600000;
@@ -83,4 +84,5 @@
 
 	/* - FONT - */
 	--font: monospace;
+
 }

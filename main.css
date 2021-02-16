@@ -33,7 +33,7 @@ body {
 		margin-left: 0;
 		width: 100vw !important;
 	}
-	
+
 	/* content */
 
 	.table {
@@ -48,7 +48,7 @@ body {
 
 @media only screen and (min-width: 801px) {
 	/* navigator */
-	
+
 	#navigator {
 		display: block !important;
 	}
@@ -94,6 +94,7 @@ body {
 	width: 25%;
 	min-width: fit-content;
 	padding: 12px 10px;
+
 	box-sizing: border-box;
 
 	background: var(--background);
@@ -131,13 +132,14 @@ a {
 #navigator-list {
 	display: grid;
 	gap: 5px;
+	padding: 0 2px;
 }
 
 .navigator-item {
 	font-size: 20px;
 	text-align: left;
 
-	padding: 10px 0 10px 15px;
+	padding: 15px 0 15px 15px;
 
 	background: var(--navigator-item);
 }
@@ -224,6 +226,7 @@ a {
 	width: 75%;
 	margin-top: 13.5px;
 	padding: 0 10px 50px;
+
 	box-sizing: border-box;
 }
 
@@ -521,12 +524,12 @@ pre.hljs code {
 
 #footer-background {
 	position: fixed;
-	
+
 	bottom: 0;
 	left: 0;
 	right: 0;
 	z-index: 2;
-	
+
 	height: 50px;
 
 	background: var(--background);
@@ -578,7 +581,7 @@ pre.hljs code {
 	position: absolute;
 
 	background-color: var(--actionbar-cross);
-	
+
 	left: 15px;
 	height: 33px;
 	width: 2px;

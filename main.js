@@ -1,12 +1,10 @@
 async function copy (el) {
 	let text = $(el).text().trim()
 
-	document.cookie = `copy=true;path=/`
-
 	navigator.clipboard.writeText(text)
 	console.log("code-snippet copied")
 
-	action("code-snippet copied", 5000)
+	action("code-snippet copied")
 }
 
 async function action (text, time, color) {
@@ -15,7 +13,7 @@ async function action (text, time, color) {
 
 	$("#action-bar").children(".action-content").text(text)
 	$("#action-bar").css("display", "block")
-	$("#action-bar").css("background-color", color || "var(--actionbar-background)")
+	$("#action-bar").css("background-color", typeof color == "string" ? color : "var(--actionbar-background)")
 
 	setTimeout(() => {
 		if (curr != window.current) return
@@ -34,8 +32,8 @@ function toggleNavigator (change) {
 }
 
 function toggleLightDark () {
-	let lightdark = $.cookie.get("lightdark") == "darkmode" ? "lightmode" : "darkmode"
-	$.cookie.set("lightdark", lightdark)
+	let lightdark = $.cookie.get("lightdark") == "lightmode" ? "darkmode" : "lightmode"
+	$.cookie.set("lightdark", lightdark, { expires: 365 })
 
 	$("#theme").attr("href", `${window.origin}/${lightdark}.css`)
 	if (window.location.pathname == "/cookies/") setTimeout(loadActiveCookies, 200)

@@ -1,6 +1,7 @@
-$("head").first().append(`<link id=\"theme\" rel=\"stylesheet\" href=\"${window.origin}/${$.cookie.get("lightdark") || "lightmode"}.css\">`)
+$("head").first().append(`<link id=\"theme\" rel=\"stylesheet\" href=\"${window.origin}/${$.cookie.get("lightdark") || "darkmode"}.css\">`)
 
 window.onload = function () {
+
 	/* - CODE - */
 	// main
 	$("pre.hljs").on("click", ev => copy(ev.target))
@@ -44,10 +45,11 @@ window.onload = function () {
 	/* - ACTION-BAR - */
 	$("#action-bar-close").on("click", ev => $(ev.target).parent().css("display", "none"))
 
-		
+
 	/* - PROJECT - */
 	$(".project").css("transition", "background 0.4s")
 
 	/* - COOKIES - */
 	if (window.location.pathname == "/cookies/") loadActiveCookies()
+
 }
