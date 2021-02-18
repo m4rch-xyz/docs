@@ -71,7 +71,7 @@ a {
 	margin: 40px 10%;
 	bottom: 50px;
 	top: 71px;
-	
+
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
@@ -88,12 +88,12 @@ a {
 	height: 25px;
 	margin-bottom: 5px;
 
+	background: var(--index-project-background);
+
 	font-size: 20px;
 	text-align: center;
 	text-decoration: none;
 	color: var(--text-color);
-
-	background: var(--index-project-background);
 
 	cursor: pointer;
 }
@@ -112,12 +112,12 @@ a {
 	position: fixed;
 	bottom: 0;
 
-	box-sizing: border-box;
-	border-top: 2px var(--heading-border) solid;
-
 	height: 50px;
 	left: 5%;
 	right: 5%;
+
+	box-sizing: border-box;
+	border-top: 2px var(--heading-border) solid;
 
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
@@ -126,7 +126,7 @@ a {
 
 #footer > * {
 	height: 48px;
-	padding: 7px 0;
+	padding: 11px 0;
 
 	box-sizing: border-box;
 
@@ -143,12 +143,12 @@ a {
 
 #footer-background {
 	position: fixed;
-	
+
 	bottom: 0;
 	left: 0;
 	right: 0;
 	z-index: 2;
-	
+
 	height: 50px;
 
 	background: var(--background);
@@ -163,7 +163,7 @@ a {
 	margin: 40px 10%;
 	bottom: 50px;
 	top: 71px;
-	
+
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
@@ -173,14 +173,14 @@ a {
 }
 
 #no-cookies {
-	background: #00000020;
+	background: var(--no-cookie-background);
 	padding: 20px 10vw 25px;
 	text-align: center;
 }
 
 #no-cookies-heading {
 	font-size: 26px;
-	border-bottom: 2px solid #000000;
+	border-bottom: 2px solid var(--text-color);
 	margin: 0 0 12px;
 }
 
@@ -195,9 +195,11 @@ a {
 }
 
 .cookie > * {
-	height: 50px;
+	height: 62px;
+	padding: 20px 0;
+
 	box-sizing: border-box;
-	padding: 13px;
+
 	font-size: 18px;
 }
 
@@ -205,22 +207,28 @@ a {
 	float: left;
 
 	width: 80%;
+	padding-left: 30px;
 
-	/* background: #f5f5f5; */
+	background: var(--cookie-name-background);
 
 	white-space: pre;
 }
 
 .cookie-delete {
-	width: 20%;
 	float: right;
-	text-align: center;
+
+	width: 20%;
+
 	background: var(--cookie-delete);
+
+	text-align: center;
+
 	cursor: pointer;
 }
 
 .cookie-value {
 	display: inline;
+
 	color: var(--cookie-value);
 }
 
@@ -232,16 +240,18 @@ a {
 
 #lightdark {
 	position: absolute;
+
 	top: 8px;
 	right: 10px;
 	height: 44px;
 	width: 44px;
 
-	cursor: pointer;
+	background: none;
 
 	border-radius: 50%;
 	box-shadow: inset 20px 0 var(--lightdark);
-	background: none;
+
+	cursor: pointer;
 }
 
 #lightdark:hover {
@@ -253,18 +263,16 @@ a {
 #action-bar {
 	position: fixed;
 
-	width: 100%;
-
 	bottom: 0;
 	left: 0;
 	right: 0;
 	z-index: 6;
 
+	width: 100%;
 	height: 2%;
+	padding: 15px 0;
 
 	background-color: var(--actionbar-background);
-
-	padding: 15px;
 
 	display: none;
 }
@@ -277,10 +285,11 @@ a {
 #action-bar-close {
 	position: absolute;
 
-	right: 45px;
+	right: 25px;
 	top: 10px;
 	width: 30px;
 	height: 30px;
+
 	opacity: 0.4;
 
 	cursor: pointer;
@@ -294,12 +303,12 @@ a {
 	position: absolute;
 
 	background-color: var(--actionbar-cross);
-	
+
 	left: 15px;
 	height: 33px;
 	width: 2px;
 
-	content: ' ';
+	content: '';
 }
 
 #action-bar-close:before {

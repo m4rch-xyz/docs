@@ -1,9 +1,8 @@
-( v 2021-02-16 )
+( v 2021-02-18 )
 [ content ]
-	- added no-cookie information to /cookies/
 [ ui ]
-	- slight color adjustments in lightmode and darkmode
+	- adjusted action-bar background color in lightmode
 [ fixes ]
-	- turned session cookies for darkmode into 1-year cookies
+	- automatically switch to darkmode after deleting "lightdark" cookie
 [ misc ]
-	- made whitespace more consistent
+	- small changes in structure in css-files

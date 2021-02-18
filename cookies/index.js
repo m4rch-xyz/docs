@@ -22,5 +22,5 @@ function deleteCookie (el) {
 
 	loadActiveCookies()
 
-	$("#theme").attr("href", `${window.origin}/${$.cookie.get("lightdark") || "lightmode"}.css`)
+	$("#theme").attr("href", `${window.origin}/${$.cookie.get("lightdark") || "darkmode"}.css`)
 }
