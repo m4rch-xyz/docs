@@ -124,7 +124,7 @@ a {
 }
 
 #navigator-heading:hover, #doc-heading:hover {
-	color: var(--heading-focus);
+	color: var(--heading-hover);
 }
 
 /* navigator items */
@@ -160,12 +160,13 @@ a {
 #extend-navigator {
 	position: fixed;
 	left: 0;
-	bottom: calc(50px + 1.2vh);
+	bottom: calc(50px + 2vh);
 
 	display: grid;
 	gap: 0;
 
 	height: 7.5vh;
+	max-width: 80px;
 	width: 12vw;
 	padding: 2%;
 	box-sizing: border-box;
@@ -279,10 +280,10 @@ a {
 }
 
 #toc .toc-content a:hover {
-	background: var(--toc-background-focus);
+	background: var(--toc-background-hover);
 }
 
-/* CONTENT */
+/* - CONTENT - */
 
 .constructor {
 	font-weight: 900;
@@ -336,11 +337,11 @@ a {
 }
 
 .sub-content-content a:hover {
-	color: var(--content-link-focus);
+	color: var(--content-link-hover);
 }
 
 .sub-content-content:hover {
-	border-left: 3px solid var(--content-border-left-focus);
+	border-left: 3px solid var(--content-border-left-hover);
 }
 
 /* table */
@@ -419,7 +420,7 @@ a {
 }
 
 .property-link:hover {
-	color: var(--property-link-focus) !important;
+	color: var(--property-link-hover) !important;
 }
 
 /* code */
@@ -441,7 +442,7 @@ a {
 	width: 100%;
 	margin: 4px 0 0;
 
-	background-color: var(--code-extend-focus);
+	background-color: var(--code-extend-hover);
 }
 
 .extend-code div {
@@ -486,9 +487,8 @@ pre.hljs code {
 }
 
 #lightdark:hover {
-	box-shadow: inset 20px 0 var(--lightdark-focus);
+	box-shadow: inset 20px 0 var(--lightdark-hover);
 }
-
 
 /* - FOOTER - */
 
@@ -522,7 +522,7 @@ pre.hljs code {
 }
 
 #footer > *:hover {
-	background: var(--footer-background-focus);
+	background: var(--footer-background-hover);
 }
 
 #footer-background {
@@ -548,9 +548,11 @@ pre.hljs code {
 	right: 0;
 	z-index: 6;
 
-	height: 2%;
 	width: 100%;
+	height: 48px;
 	padding: 15px 0;
+
+	box-sizing: border-box;
 
 	background-color: var(--actionbar-background);
 

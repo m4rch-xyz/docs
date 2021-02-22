@@ -24,6 +24,7 @@ a {
 	/* cookies */
 	.cookie-name {
 		width: 100% !important;
+		padding-left: 0 !important;
 		text-align: center;
 	}
 
@@ -33,7 +34,7 @@ a {
 	}
 
 	.cookie {
-		height: 100px !important;
+		height: 140px !important;
 		margin-bottom: 20px !important;
 	}
 
@@ -59,7 +60,7 @@ a {
 }
 
 #heading:hover {
-	color: var(--heading-focus);
+	color: var(--heading-hover);
 }
 
 /* - PROJECTS - */
@@ -103,7 +104,7 @@ a {
 }
 
 .project:hover {
-	background: var(--index-project-background-focus);
+	background: var(--index-project-background-hover);
 }
 
 /* - FOOTER - */
@@ -138,7 +139,7 @@ a {
 }
 
 #footer > *:hover {
-	background: var(--footer-background-focus);
+	background: var(--footer-background-hover);
 }
 
 #footer-background {
@@ -186,8 +187,8 @@ a {
 
 .cookie {
 	width: 100%;
-	height: 50px;
-	margin-bottom: 5px;
+	height: 70px;
+	margin-bottom: 20px;
 }
 
 .cookie:last-child {
@@ -195,8 +196,8 @@ a {
 }
 
 .cookie > * {
-	height: 62px;
-	padding: 20px 0;
+	height: 70px;
+	padding: 24px 0;
 
 	box-sizing: border-box;
 
@@ -233,7 +234,7 @@ a {
 }
 
 .cookie-delete:hover {
-	background: var(--cookie-delete-focus);
+	background: var(--cookie-delete-hover);
 }
 
 /* - LIGHTDARK - */
@@ -255,7 +256,7 @@ a {
 }
 
 #lightdark:hover {
-	box-shadow: inset 20px 0 var(--lightdark-focus);
+	box-shadow: inset 20px 0 var(--lightdark-hover);
 }
 
 /* - ACTION BAR - */
@@ -269,8 +270,10 @@ a {
 	z-index: 6;
 
 	width: 100%;
-	height: 2%;
+	height: 48px;
 	padding: 15px 0;
+
+	box-sizing: border-box;
 
 	background-color: var(--actionbar-background);
 

@@ -36,5 +36,5 @@ function toggleLightDark () {
 	$.cookie.set("lightdark", lightdark, { expires: 365 })
 
 	$("#theme").attr("href", `${window.origin}/${lightdark}.css`)
-	if (window.location.pathname == "/cookies/") setTimeout(loadActiveCookies, 200)
+	if (window.location.pathname == "/cookies/") loadActiveCookies()
 }

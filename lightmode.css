@@ -13,7 +13,7 @@
 	--content-divider: #aaaaaa;
 
 	/* navigator */
-	--heading-focus: #0090a0;
+	--heading-hover: #0090a0;
 
 	--navigator-extend-border: #000000;
 	--navigator-extend-background: #ffffff;
@@ -28,7 +28,7 @@
 
 	/* table of content */
 	--toc-heading-border: #008080;
-	--toc-background-focus: #00808033;
+	--toc-background-hover: #00808033;
 
 	/* CONTENT */
 	/* header */
@@ -36,10 +36,10 @@
 
 	/* content */
 	--content-border-left: #00808033;
-	--content-border-left-focus: #008080e6;
+	--content-border-left-hover: #008080e6;
 
 	--content-link: #008080e6;
-	--content-link-focus: #005050;
+	--content-link-hover: #005050;
 
 	/* table */
 	--table-heading-background: #008080;
@@ -54,20 +54,20 @@
 	--property-highlight-value:#00808099;
 
 	--property-link: #ff300099;
-	--property-link-focus: #ff3000ee;
+	--property-link-hover: #ff3000ee;
 
 	/* code */
 	--code-extend: #0080800d;
-	--code-extend-focus: #00808033;
+	--code-extend-hover: #00808033;
 	--code-extend-line: #000000;
 
 	/* lightdark */
 	--lightdark: #333333;
-	--lightdark-focus: #008080;
+	--lightdark-hover: #008080;
 
 	/* footer */
 	--footer-color: #333333;
-	--footer-background-focus: #f2f2f2;
+	--footer-background-hover: #f2f2f2;
 
 	/* action bar */
 	--actionbar-background: #0090b0;
@@ -75,14 +75,14 @@
 
 	/* index */
 	--index-project-background: #f2f2f2;
-	--index-project-background-focus: #00808033;
+	--index-project-background-hover: #00808033;
 
 	/* cookies */
 	--cookie-name-background: #f2f2f2;
 	--cookie-value: #0080a0;
 
 	--cookie-delete: #ff00001a;
-	--cookie-delete-focus: #ff000066;
+	--cookie-delete-hover: #ff000066;
 
 	--no-cookie-background: #00000020;
 

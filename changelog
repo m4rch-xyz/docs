@@ -1,8 +1,13 @@
-( v 2021-02-18 )
+( v 2021-02-22 )
 [ content ]
 [ ui ]
-	- adjusted action-bar background color in lightmode
+	- made cookie information bigger
+	- slight color adjustments to cookie information in darkmode
 [ fixes ]
-	- automatically switch to darkmode after deleting "lightdark" cookie
+	- fixed action bar height to footer height
+	- removed left padding on cookie name when in mobile mode
+	- readded spacing to cookie information divs
 [ misc ]
-	- small changes in structure in css-files
+	- renamed "-focus" variables to "-hover"
+	- removed useless whitespace
+	- removed useless setTimeout
