@@ -1,13 +1,10 @@
 ( v 2021-02-22 )
 [ content ]
+	- openrgb-sdk: added events to Client
 [ ui ]
-	- made cookie information bigger
-	- slight color adjustments to cookie information in darkmode
+	- added on-hover color to content headers
 [ fixes ]
-	- fixed action bar height to footer height
-	- removed left padding on cookie name when in mobile mode
-	- readded spacing to cookie information divs
+	- fixed some incorrect id's for sub-content
 [ misc ]
-	- renamed "-focus" variables to "-hover"
-	- removed useless whitespace
-	- removed useless setTimeout
+	- added links to content-headers
+	- renamed css variable for sub-headers

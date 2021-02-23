@@ -32,11 +32,13 @@
 
 	/* CONTENT */
 	/* header */
-	--content-heading-border: #008080aa;
+	--sub-heading-border: #008080aa;
 
 	/* content */
 	--content-border-left: #00808033;
 	--content-border-left-hover: #008080e6;
+
+	--content-heading-hover: #008080;
 
 	--content-link: #008080e6;
 	--content-link-hover: #005050;

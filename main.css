@@ -303,17 +303,26 @@ a {
 
 	box-sizing: border-box;
 
-	border-bottom: 3px solid var(--content-heading-border);
+	border-bottom: 3px solid var(--sub-heading-border);
 
 	font-size: 24px;
 }
 
 .sub-content-header {
-	width: 100%;
+	display: inline-block;
+
+	/* width: 100%; */
 	margin-bottom: 3px;
 
-	text-align: left;
 	font-size: 21px;
+}
+
+.sub-content-header:hover {
+	color: var(--content-heading-hover);
+}
+
+.sub-content-header:hover ~ .sub-content-content {
+	border-left: 3px solid var(--content-border-left-hover);
 }
 
 .sub-content-content {
@@ -323,6 +332,10 @@ a {
 	padding: 2px 0 2px 7px;
 
 	font-size: 15px;
+}
+
+.sub-content-content:hover {
+	border-left: 3px solid var(--content-border-left-hover);
 }
 
 .sub-content-content > div {
@@ -338,10 +351,6 @@ a {
 
 .sub-content-content a:hover {
 	color: var(--content-link-hover);
-}
-
-.sub-content-content:hover {
-	border-left: 3px solid var(--content-border-left-hover);
 }
 
 /* table */

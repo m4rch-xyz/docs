@@ -16,6 +16,7 @@ window.onload = function () {
 
 
 	/* - CONTENT - */
+	$(".sub-content-header").css("transition", "color 0.4s")
 	$(".sub-content-content").css("transition", "border 0.4s")
 
 
