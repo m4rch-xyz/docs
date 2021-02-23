@@ -1,10 +1,8 @@
-( v 2021-02-22 )
+( v 2021-02-23 )
 [ content ]
-	- openrgb-sdk: added events to Client
 [ ui ]
-	- added on-hover color to content headers
 [ fixes ]
-	- fixed some incorrect id's for sub-content
+	- typo in /openrgb/client/
 [ misc ]
-	- added links to content-headers
-	- renamed css variable for sub-headers
+	- organized css files
+	- replaced ">" with "&gt;"

@@ -68,10 +68,11 @@ a {
 #projects {
 	position: absolute;
 
+	top: 71px;
+	bottom: 50px;
+
 	width: 80%;
 	margin: 40px 10%;
-	bottom: 50px;
-	top: 71px;
 
 	overflow-y: scroll;
 	overflow-x: hidden;
@@ -111,11 +112,12 @@ a {
 
 #footer {
 	position: fixed;
+
+	right: 5%;
 	bottom: 0;
+	left: 5%;
 
 	height: 50px;
-	left: 5%;
-	right: 5%;
 
 	box-sizing: border-box;
 	border-top: 2px var(--heading-border) solid;
@@ -145,9 +147,9 @@ a {
 #footer-background {
 	position: fixed;
 
+	right: 0;
 	bottom: 0;
 	left: 0;
-	right: 0;
 	z-index: 2;
 
 	height: 50px;
@@ -160,10 +162,11 @@ a {
 #cookies {
 	position: absolute;
 
+	top: 71px;
+	bottom: 50px;
+
 	width: 80%;
 	margin: 40px 10%;
-	bottom: 50px;
-	top: 71px;
 
 	overflow-y: scroll;
 	overflow-x: hidden;
@@ -244,6 +247,7 @@ a {
 
 	top: 8px;
 	right: 10px;
+
 	height: 44px;
 	width: 44px;
 
@@ -264,9 +268,9 @@ a {
 #action-bar {
 	position: fixed;
 
+	right: 0;
 	bottom: 0;
 	left: 0;
-	right: 0;
 	z-index: 6;
 
 	width: 100%;
@@ -288,8 +292,9 @@ a {
 #action-bar-close {
 	position: absolute;
 
-	right: 25px;
 	top: 10px;
+	right: 25px;
+
 	width: 30px;
 	height: 30px;
 
@@ -305,11 +310,12 @@ a {
 #action-bar-close:before, #action-bar-close:after {
 	position: absolute;
 
-	background-color: var(--actionbar-cross);
-
 	left: 15px;
+
 	height: 33px;
 	width: 2px;
+
+	background-color: var(--actionbar-cross);
 
 	content: '';
 }

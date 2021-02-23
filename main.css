@@ -1,8 +1,8 @@
 /* - GLOBAL - */
 
 * {
-	margin: 0;
 	padding: 0;
+	margin: 0;
 	font-family: var(--font);
 	color: var(--text-color);
 }
@@ -86,6 +86,7 @@ body {
 
 #navigator {
 	position: fixed;
+
 	top: 0;
 	bottom: 50px;
 	left: 0;
@@ -112,11 +113,12 @@ a {
 #navigator-heading, #doc-heading {
 	display: block;
 
-	margin: 2px 0 12px;
 	padding-bottom: 4px;
-	box-sizing: border-box;
+	margin: 2px 0 12px;
 
 	border-bottom: 2px solid var(--heading-border);
+
+	box-sizing: border-box;
 
 	font-size: 35px;
 	font-weight: 700;
@@ -132,6 +134,7 @@ a {
 #navigator-list {
 	display: grid;
 	gap: 5px;
+
 	padding: 0 2px;
 }
 
@@ -159,21 +162,23 @@ a {
 
 #extend-navigator {
 	position: fixed;
-	left: 0;
+
 	bottom: calc(50px + 2vh);
+	left: 0;
 
 	display: grid;
 	gap: 0;
 
 	height: 7.5vh;
-	max-width: 80px;
 	width: 12vw;
+	max-width: 80px;
 	padding: 2%;
-	box-sizing: border-box;
 
 	border: var(--navigator-extend-border) 2px solid;
 	border-left: none;
 	border-radius: 0 10% 10% 0;
+
+	box-sizing: border-box;
 
 	background-color: var(--navigator-extend-background);
 
@@ -195,6 +200,7 @@ a {
 
 #navigator-overlay {
 	position: fixed;
+
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -211,9 +217,10 @@ a {
 
 #navigator-border {
 	position: absolute;
+
 	top: 10px;
-	bottom: 10px;
 	right: 0;
+	bottom: 10px;
 
 	border-right: 2px solid var(--content-divider);
 }
@@ -226,8 +233,8 @@ a {
 
 #doc {
 	width: 75%;
-	margin-top: 13.5px;
 	padding: 0 10px 50px;
+	margin-top: 13.5px;
 
 	box-sizing: border-box;
 }
@@ -250,8 +257,8 @@ a {
 }
 
 #toc .toc-heading {
-	margin: 0 0 4px 0;
 	padding: 7px 0;
+	margin: 0 0 4px 0;
 
 	border-bottom: 4px solid var(--toc-heading-border);
 
@@ -267,13 +274,14 @@ a {
 
 #toc .toc-content a {
 	display: block;
+
 	padding: 3px 0;
 
 	cursor: pointer;
 
+	color: var(--text-color);
 	text-align: center;
 	font-size: 17px;
-	color: var(--text-color);
 	text-decoration: none;
 
 	transition: background 0.4s;
@@ -296,10 +304,9 @@ a {
 .sub-header {
 	display: inline-block;
 
-	margin-bottom: 20px;
-	padding: 0 0 3px 2%;
-
 	width: 50%;
+	padding: 0 0 3px 2%;
+	margin-bottom: 20px;
 
 	box-sizing: border-box;
 
@@ -311,7 +318,6 @@ a {
 .sub-content-header {
 	display: inline-block;
 
-	/* width: 100%; */
 	margin-bottom: 3px;
 
 	font-size: 21px;
@@ -328,8 +334,8 @@ a {
 .sub-content-content {
 	border-left: 3px solid var(--content-border-left);
 
-	margin-top: 1px;
 	padding: 2px 0 2px 7px;
+	margin-top: 1px;
 
 	font-size: 15px;
 }
@@ -365,6 +371,7 @@ a {
 	border: none;
 
 	padding: 10px 5px;
+
 	box-sizing: border-box;
 
 	text-align: center;
@@ -403,9 +410,10 @@ a {
 
 .property-type {
 	display: inline-block;
-	background-color: var(--property-background);
-	margin-top: 4px;
 	padding: 3px 4px;
+	margin-top: 4px;
+
+	background-color: var(--property-background);
 
 	color: var(--property-text);
 }
@@ -461,7 +469,7 @@ a {
 
 	width: 30px;
 	height: 9px;
-	border-bottom: 2px var(--code-extend-line) solid;
+	border-bottom: 2px solid var(--code-extend-line);
 }
 
 pre.hljs {
@@ -483,8 +491,10 @@ pre.hljs code {
 
 #lightdark {
 	position: absolute;
+
 	top: 8px;
 	right: 10px;
+
 	height: 44px;
 	width: 44px;
 
@@ -503,11 +513,12 @@ pre.hljs code {
 
 #footer {
 	position: fixed;
+
+	right: 12px;
 	bottom: 0;
+	left: 12px;
 
 	height: 50px;
-	left: 12px;
-	right: 12px;
 
 	box-sizing: border-box;
 	border-top: 2px var(--heading-border) solid;
@@ -537,9 +548,9 @@ pre.hljs code {
 #footer-background {
 	position: fixed;
 
+	right: 0;
 	bottom: 0;
 	left: 0;
-	right: 0;
 	z-index: 2;
 
 	height: 50px;
@@ -552,14 +563,13 @@ pre.hljs code {
 #action-bar {
 	position: fixed;
 
+	right: 0;
 	bottom: 0;
 	left: 0;
-	right: 0;
 	z-index: 6;
 
 	width: 100%;
 	height: 48px;
-	padding: 15px 0;
 
 	box-sizing: border-box;
 
@@ -569,6 +579,12 @@ pre.hljs code {
 }
 
 #action-bar .action-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 100%;
+
 	font-size: 20px;
 	text-align: center;
 }
@@ -576,8 +592,9 @@ pre.hljs code {
 #action-bar-close {
 	position: absolute;
 
-	right: 25px;
 	top: 10px;
+	right: 25px;
+
 	width: 30px;
 	height: 30px;
 
@@ -593,11 +610,12 @@ pre.hljs code {
 #action-bar-close:before, #action-bar-close:after {
 	position: absolute;
 
-	background-color: var(--actionbar-cross);
-
 	left: 15px;
+
 	height: 33px;
 	width: 2px;
+
+	background-color: var(--actionbar-cross);
 
 	content: '';
 }
