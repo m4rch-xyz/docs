@@ -1,8 +1,7 @@
-( v 2021-02-23 )
+( v 2021-03-12 )
 [ content ]
+	- cookie notification
+	- matrix
 [ ui ]
 [ fixes ]
-	- typo in /openrgb/client/
 [ misc ]
-	- organized css files
-	- replaced ">" with "&gt;"

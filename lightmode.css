@@ -71,9 +71,16 @@
 	--footer-color: #333333;
 	--footer-background-hover: #f2f2f2;
 
+	--footer-cross: #333333;
+
 	/* action bar */
 	--actionbar-background: #0090b0;
-	--actionbar-cross: #333333;
+
+	/* cookie */
+	--cookiebar-background: #00a080;
+
+	--cookiebar-link: #004060;
+	--cookiebar-link-hover: #003090;
 
 	/* index */
 	--index-project-background: #f2f2f2;

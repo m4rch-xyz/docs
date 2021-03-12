@@ -31,7 +31,17 @@ window.onload = function () {
 
 
 	/* - FOOTER - */
+	// general
 	$("#footer > *").css("transition", "background 0.4s")
+
+	// action-bar
+	$("#action-bar-close").on("click", ( ev ) => $(ev.target).parent().css("display", "none"))
+
+	// cookie-bar
+	$("#cookie-bar-close").on("click", ( ev ) => disableCookieFooter(ev.target))
+	$("#cookie-bar a").css("transition", "0.4s color")
+
+	if ($.cookie.get("cookie-message-disable", { nojson: true }) != "true") $("#cookie-bar").css("display", "block")
 
 
 	/* - LIGHTDARK - */
@@ -43,12 +53,9 @@ window.onload = function () {
 	$(".property-link, .table a").css("transition", "color 0.4s")
 
 
-	/* - ACTION-BAR - */
-	$("#action-bar-close").on("click", ev => $(ev.target).parent().css("display", "none"))
-
-
 	/* - PROJECT - */
 	$(".project").css("transition", "background 0.4s")
+
 
 	/* - COOKIES - */
 	if (window.location.pathname == "/cookies/") loadActiveCookies()

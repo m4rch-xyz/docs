@@ -11,14 +11,14 @@ async function action (text, time, color) {
 	let curr = Math.random()
 	window.current = curr
 
-	$("#action-bar").children(".action-content").text(text)
+	$("#action-bar").children(".footer-bar-content").text(text)
 	$("#action-bar").css("display", "block")
 	$("#action-bar").css("background-color", typeof color == "string" ? color : "var(--actionbar-background)")
 
 	setTimeout(() => {
 		if (curr != window.current) return
 		$("#action-bar").css("display", "none")
-		$("#action-bar").children(".action-content").text("")
+		$("#action-bar").children(".footer-bar-content").text("")
 	}, +time || 3000)
 }
 
@@ -36,5 +36,12 @@ function toggleLightDark () {
 	$.cookie.set("lightdark", lightdark, { expires: 365 })
 
 	$("#theme").attr("href", `${window.origin}/${lightdark}.css`)
+	if (window.location.pathname == "/cookies/") loadActiveCookies()
+}
+
+function disableCookieFooter ( el ) {
+	$(el).parent().css("display", "none")
+	$.cookie.set("cookie-message-disable", "true")
+
 	if (window.location.pathname == "/cookies/") loadActiveCookies()
 }

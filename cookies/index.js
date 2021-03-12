@@ -23,4 +23,5 @@ function deleteCookie (el) {
 	loadActiveCookies()
 
 	$("#theme").attr("href", `${window.origin}/${$.cookie.get("lightdark") || "darkmode"}.css`)
+	if ($.cookie.get("cookie-message-disable", { nojson: true }) != "true") $("#cookie-bar").css("display", "block")
 }

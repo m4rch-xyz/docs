@@ -46,6 +46,12 @@ body {
 	}
 }
 
+@media only screen and (max-width: 1000px) {
+	.footer-bar {
+		height: 76px !important;
+	}
+}
+
 @media only screen and (min-width: 801px) {
 	/* navigator */
 
@@ -560,7 +566,7 @@ pre.hljs code {
 
 /* - ACTION BAR - */
 
-#action-bar {
+.footer-bar {
 	position: fixed;
 
 	right: 0;
@@ -570,29 +576,43 @@ pre.hljs code {
 
 	width: 100%;
 	height: 48px;
+	padding: 15px 55px;
 
 	box-sizing: border-box;
 
-	background-color: var(--actionbar-background);
 
 	display: none;
 }
 
-#action-bar .action-content {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+#cookie-bar a {
+	color: var(--cookiebar-link);
 
-	height: 100%;
+	display: inline;
+}
 
+#cookie-bar a:hover {
+	color: var(--cookiebar-link-hover);
+}
+
+#action-bar {
+	z-index: 10;
+
+	background-color: var(--actionbar-background);
+}
+
+#cookie-bar {
+	background-color: var(--cookiebar-background);
+}
+
+.footer-bar .footer-bar-content {
 	font-size: 20px;
 	text-align: center;
 }
 
-#action-bar-close {
+.close {
 	position: absolute;
 
-	top: 10px;
+	bottom: 10px;
 	right: 25px;
 
 	width: 30px;
@@ -603,11 +623,11 @@ pre.hljs code {
 	cursor: pointer;
 }
 
-#action-bar-close:hover {
+.close:hover {
 	opacity: 1;
 }
 
-#action-bar-close:before, #action-bar-close:after {
+.close:before, .close:after {
 	position: absolute;
 
 	left: 15px;
@@ -615,15 +635,15 @@ pre.hljs code {
 	height: 33px;
 	width: 2px;
 
-	background-color: var(--actionbar-cross);
+	background-color: var(--footer-cross);
 
 	content: '';
 }
 
-#action-bar-close:before {
+.close:before {
 	transform: rotate(45deg);
 }
 
-#action-bar-close:after {
+.close:after {
 	transform: rotate(-45deg);
 }

@@ -193,6 +193,40 @@
 			</div>
 
 			<div class="sub-content">
+				<a href="#mode" id="mode" class="sub-content-header">mode</a>
+				<div class="sub-content-content">
+					<div>an object containing all the values for a native mode of the device</div>
+					<table class="three-table table">
+						<tr>
+							<th>parameter</th>
+							<th>type</th>
+							<th>description</th>
+						</tr>
+						<tr>
+							<td>height</td>
+							<td>int</td>
+							<td>amount of lines</td>
+						</tr>
+						<tr>
+							<td>keys</td>
+							<td>array&lt;array&lt;int | undefined&gt;&gt;</td>
+							<td>array of lines, which are arrays of key-ids or undefined if not existent</td>
+						</tr>
+						<tr>
+							<td>width</td>
+							<td>int</td>
+							<td>amount of keys per line</td>
+						</tr>
+						<tr>
+							<td>size</td>
+							<td>int</td>
+							<td>amount of keys</td>
+						</tr>						
+					</table>
+				</div>
+			</div>
+
+			<div class="sub-content">
 				<a href="#zone" id="zone" class="sub-content-header">zone</a>
 				<div class="sub-content-content">
 					<div>an object containing every values a zone can have</div>
@@ -249,9 +283,14 @@
 	</div>
 	<div id="footer-background"></div>
 
-	<div id="action-bar">
-		<div class="action-content"></div>
+	<div class="footer-bar" id="action-bar">
+		<div class="footer-bar-content"></div>
 		<div class="close" id="action-bar-close"></div>
+	</div>
+
+	<div class="footer-bar" id="cookie-bar">
+		<div class="footer-bar-content">this website only uses functional cookies. to see what is currently saved go to <a href="/cookies/">/cookies/</a></div>
+		<div class="close" id="cookie-bar-close"></div>
 	</div>
 
 </body>
